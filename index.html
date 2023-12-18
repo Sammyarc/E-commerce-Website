@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home - SwiftCart E-commerce Website</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin="crossorigin">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <link
+            href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+            rel='stylesheet'>
+    </head>
+    <body>
+        <!---------PRELOADER------>
+        <figure class="preloader"> <div class="dot white"></div> <div
+        class="dot"></div> <div class="dot"></div> <div class="dot"></div> <div
+        class="dot"></div> </figure>
+        <!--------MAIN CONTENT----->
+        <section class="content">
+            <div class="lg:px-20">
+                <!---------TOP BAR---->
+                <div class="flex justify-between p-4">
+                    <div class="flex gap-5">
+                        <a
+                            href="tel:+2347058667431"
+                            class="flex place-items-center mt-2 space-x-2 text-sm js-show-on-scroll">
+                            <i class='bx bx-phone text-lg text-orange'></i>
+                            <span class="font-medium ">+2347058667431</span>
+                        </a>
+                        <a
+                            href="mailto: nkemakolamsam@gmail.com"
+                            class="flex place-items-center mt-2 space-x-2 text-sm js-show-on-scroll">
+                            <i class='bx bx-envelope text-lg text-orange'></i>
+                            <span class="font-medium">nkemakolamsam@gmail.com</span>
+                        </a>
+                    </div>
+                    <!-------BUTTONS---->
+                    <div class="flex gap-5">
+                        <a href="">
+                            <button
+                                class="border-orange border-2 px-5 py-1 rounded-lg hover:bg-orange hover:text-white transition duration-500 ease-in-out">Log In</button>
+                        </a>
+                        <a href="">
+                            <button
+                                class="border-black border-2 px-5 py-1 rounded-lg hover:bg-black hover:text-white transition duration-500 ease-in-out">Sign Up</button>
+                        </a>
+                    </div>
+                </div>
+                <hr class="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700">
+                <!-------NAVIGATION----->
+                <div class="flex justify-between p-4">
+                    <!------LOGO----->
+                    <div class="flex gap-3 place-items-center">
+                        <i
+                            class='bx bx-cart text-white p-2 border-orange border bg-orange rounded-full text-2xl'></i>
+                        <span class="text-2xl font-bold">SwiftCart</span>
+                    </div>
+                    <!----SEARCH COMPONENT---->
+                    <div class="search-container rounded-full">
+                        <input
+                            type="text"
+                            id="search-input"
+                            placeholder="Search for products"
+                            class="search-input rounded-full">
+                        <i class='bx bx-search text-2xl bg-orange rounded-r-full py-2 px-3 text-white cursor-pointer'></i>
+                    </div>
+                    <!-----ICONS-->
+                    <div class="flex gap-5 place-items-center">
+                        <div class="cart-container">
+                            <i class='bx bx-cart text-4xl'></i>
+                            <span class="cart-count">0</span>
+                        </div>
+                        <i class='bx bx-user-circle text-4xl cursor-pointer' ></i>
+                        <div class="notification-container">
+                            <i class='bx bx-bell text-4xl'></i>
+                            <span class="notification-count">0</span>
+                        </div>
+                    </div>
+                </div>
+                <hr class="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700">
+                
+            </div>
+        </section>
+
+        <!--------JS LINKS------>
+        <script type="text/javascript" src="js/pre-loading.js"></script>
+    </body>
+</html>
