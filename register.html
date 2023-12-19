@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up - SwiftCart E-commerce Website</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin="crossorigin">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <link
+            href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+            rel='stylesheet'>
+    </head>
+    <body>
+        <!---------PRELOADER------>
+        <figure class="preloader">
+            <div class="dot white"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </figure>
+        <!-------MAIN CONTENT---->
+        <section class="content">
+            <!-----NAVIGATION----->
+            <div class="flex justify-between p-3 mx-5  lg:mx-30 xl:mx-36">
+                <!-----LOGO---->
+                <div class="flex gap-3 place-items-center">
+                    <i
+                        class='bx bx-cart text-white p-2 border-orange border bg-orange rounded-full text-2xl'></i>
+                    <span class="text-2xl font-bold">SwiftCart</span>
+                </div>
+                <!------MENU ITEMS------>
+                <div
+                    class="justify-between place-items-center md:space-x-4 lg:space-x-8 py-1 md:flex">
+                    <a href="index.html" class="hover:text-orange transition duration-500 ease-in-out">Home</a>
+                    <a href="#" class="hover:text-orange transition duration-500 ease-in-out">Contact</a>
+                    <a href="#" class="hover:text-orange transition duration-500 ease-in-out">About</a>
+                    <a href="register.html" class="hover:text-orange transition duration-500 ease-in-out">Sign Up</a>
+                    <a href="login.html" class="hover:text-orange transition duration-500 ease-in-out">Log In</a>
+                </div>
+                <div class="flex justify-between gap-3">
+                    <!----SEARCH COMPONENT---->
+                    <div class="search-container rounded-full">
+                        <input
+                            type="text"
+                            id="search-input"
+                            placeholder="Search for products"
+                            class="search-input rounded-full">
+                        <i
+                            class='bx bx-search text-2xl bg-orange rounded-r-full py-2 px-3 text-white cursor-pointer'></i>
+                    </div>
+                    <!-----ICONS-->
+                    <div class="flex gap-5 place-items-center">
+                        <div class="notification-container">
+                            <i class='bx bx-bell text-3xl'></i>
+                            <!--<span class="notification-count">0</span>-->
+                        </div>
+                        <div class="cart-container">
+                            <i class='bx bx-cart text-3xl'></i>
+                            <!--<span class="cart-count">0</span>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-----DETAILS-->
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <!-----LEFT ITEM-->
+                <div class="max-w-2xl mt-40">
+                    <img src="assets/images/signup.avif" alt="signup-img">
+                </div>
+                <!----------FORM INPUTS----->
+
+                <section class="mx-4 md:w-96 rounded-lg p-5 md:mt-32 mb-6 relative">
+                    <h1 class="text-center text-3xl font-bold mb-6">
+                        Sign Up
+                    </h1>
+                    <form id="registrationForm">
+                        <div>
+                            <label
+                                for="first_name"
+                                class="flex justify-start mb-2 text-sm font-medium text-gray-900">Username</label>
+                            <input
+                                type="text"
+                                id="first_name"
+                                class="border-gray-600 border-b outline-none text-gray-900 text-sm block w-full p-2.5 placeholder-gray-400"
+                                placeholder="Username"
+                                required="required">
+                                <i class='bx bx-user absolute right-6 -translate-y-7 text-lg text-gray-700' ></i>
+                        </div>
+                        <div class="mt-5 email-field">
+                            <label
+                                for="email"
+                                class="flex justify-start mb-2 text-sm font-medium text-gray-900">Email address
+                            </label>
+                            <div class="input-field">
+                                <input
+                                type="email"
+                                id="email"
+                                class="border-gray-600 border-b outline-none text-gray-900 text-sm block w-full p-2.5 placeholder-gray-400 email"
+                                placeholder="Enter your email address"
+                                >
+                                <i class='bx bxs-envelope absolute right-6 -translate-y-7 text-lg text-gray-700' ></i>
+                            </div>
+                                <span class="hidden error place-items-center text-red-600 mt-2 text-sm">
+                                    <i class='bx bx-error-circle text-lg'></i>
+                                    <p>Please enter a valid email address</p>
+                                </span>
+                        </div>
+                        <div class="mt-5 create-password">
+                            <label
+                                for="password"
+                                class="flex justify-start mb-2 text-sm font-medium text-gray-900">Password</label>
+                            <input 
+                                type="password"
+                                id="password"
+                                class="border-gray-600 border-b outline-none text-gray-900 text-sm block w-full p-2.5 placeholder-gray-400 password"
+                                placeholder="Create Password"
+                                >
+                                <i class='bx bxs-hide absolute right-6 -translate-y-7 text-lg text-gray-700' id="showPassword"></i>
+                                <span class="hidden error justify-start text-red-600 mt-2 text-sm">
+                                    <i class='bx bx-error-circle text-lg'></i>
+                                    <p>Password must be 8 characters long and include at least one uppercase letter, one lowercase letter, and one number.</p>
+                                </span>
+                        </div>
+                        <div class="mt-5 confirm-password">
+                            <label
+                                for="confirm_password"
+                                class="flex justify-start mb-2 text-sm font-medium text-gray-900">Confirm password</label>
+                            <input
+                                type="password"
+                                id="confirm_password"
+                                class="border-gray-600 border-b outline-none text-gray-900 text-sm block w-full p-2.5 placeholder-gray-400 cPassword "
+                                placeholder="Confirm Password"
+                                >
+                                <i class='bx bxs-hide absolute right-6 -translate-y-7 text-lg text-gray-700' id="showConfirmPassword"></i>
+                                <span class="hidden error place-items-center text-red-600 mt-2 text-sm">
+                                    <i class='bx bx-error-circle text-lg'></i>
+                                    <p>Password don't match</p>
+                                </span>
+                        </div>
+                        <div class="flex items-start mt-8">
+                            <div class="flex items-center h-5">
+                                <input
+                                    id="remember"
+                                    type="checkbox"
+                                    value=""
+                                    class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
+                            </div>
+                            <label for="termsCheckbox" class="ml-2 text-sm font-medium text-gray-900">I agree with
+                                <a href="policy.html" class="text-orange hover:underline dark:text-orange">SwiftCart Privacy Policy</a>.</label>
+                        </div>
+                        <button
+                            type="submit"
+                            value="register"
+                            id="registerButton"
+                            class="w-full mt-5 text-white bg-blue transition duration-500 ease-in-out hover:bg-white font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-orange dark:hover:bg-orange dark:focus:ring-orange">Create a new account</button>
+                    </form>
+                </section>
+
+            </div>
+        </section>
+        <!--------JS LINKS------>
+        <script type="text/javascript" src="js/pre-loading.js"></script>
+    </body>
+</html>
