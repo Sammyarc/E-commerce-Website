@@ -1594,6 +1594,10 @@ figure {
     margin-top: 8rem;
   }
 
+  .md\:mt-40 {
+    margin-top: 10rem;
+  }
+
   .md\:block {
     display: block;
   }
