@@ -71,12 +71,17 @@ figure {
     height: 40px;
     border: 2px solid orange;
 }
+@media (max-width: 480px) {
+  .search-container{
+    height: 30px;
+  }
+}
 .search-input{
     width: 95%;
     height: 100%;
     border: none;
     outline: none;
-    padding-left: 30px;
+    padding-left: 20px;
     padding-right: 20px;
 }
 .cart-container {
