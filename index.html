@@ -17,6 +17,15 @@
         <link
             href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
             rel='stylesheet'>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
     </head>
     <body>
         <!---------PRELOADER------>
@@ -30,49 +39,581 @@
         <!--------MAIN CONTENT----->
         <section class="content">
             <!-----NAVIGATION----->
-            <div class="flex justify-between p-3 mx-5  lg:mx-30 xl:mx-36">
+            <div class="flex justify-between p-1 mt-2 mx-5 gap-4 md:p-3 lg:mx-24 xl:mx-30">
                 <!-----LOGO---->
                 <div class="flex gap-3 place-items-center">
                     <i
                         class='bx bx-cart text-white p-2 border-orange border bg-orange rounded-full text-2xl'></i>
-                    <span class="text-2xl font-bold">SwiftCart</span>
+                    <span class="text-2xl font-bold hidden md:block">SwiftCart</span>
                 </div>
-                <!------MENU ITEMS------>
-                <div
-                    class="justify-between place-items-center md:space-x-4 lg:space-x-8 py-1 md:flex">
-                    <a href="index.html" class="hover:text-orange">Home</a>
-                    <a href="#" class="hover:text-orange">Contact</a>
-                    <a href="#" class="hover:text-orange">About</a>
-                    <a href="register.html" class="hover:text-orange">Sign Up</a>
-                    <a href="login.html" class="hover:text-orange">Log In</a>
+                <!----SEARCH COMPONENT---->
+                <div class="search-container rounded-full place-items-center">
+                    <input
+                        type="text"
+                        id="search-input"
+                        placeholder="Search for products"
+                        class="search-input rounded-full">
+                    <i
+                        class='bx bx-search text-2xl bg-orange rounded-r-full py-2 px-3 text-white cursor-pointer'></i>
                 </div>
-                <div class="flex justify-between gap-3">
-                    <!----SEARCH COMPONENT---->
-                    <div class="search-container rounded-full">
-                        <input
-                            type="text"
-                            id="search-input"
-                            placeholder="Search for products"
-                            class="search-input rounded-full">
-                        <i
-                            class='bx bx-search text-2xl bg-orange rounded-r-full py-2 px-3 text-white cursor-pointer'></i>
-                    </div>
-                    <!-----ICONS-->
-                    <div class="flex gap-5 place-items-center">
+                <!-----ICONS-->
+                <div class="flex justify-between gap-2">
+                    <div class="flex gap-1 place-items-center md:gap-7">
                         <div class="notification-container">
                             <i class='bx bx-bell text-3xl'></i>
-                            <!--<span class="notification-count">0</span>-->
+                            <span class="notification-count"></span>
                         </div>
                         <div class="cart-container">
                             <i class='bx bx-cart text-3xl'></i>
-                            <!--<span class="cart-count">0</span>-->
+                            <span class="cart-count"></span>
+                        </div>
+                        <!-------BUTTONS----->
+                        <div class="flex justify-between place-items-center gap-2">
+                            <a
+                                href="login.html"
+                                class="hidden px-4 py-2 border bg-orange text-white rounded-xl hover:bg-amber-500 transition duration-500 ease-in-out md:flex">Log In</a>
+                            <a
+                                href="register.html"
+                                class="hidden px-5 py-2 border bg-orange text-white rounded-xl hover:bg-amber-500 transition duration-500 ease-in-out md:flex">Sign Up</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+            <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-300">
+            <!-------MINI NAV----->
+            <div class="flex mx-5 md:px-3 lg:mx-24 xl:mx-30">
+                <div>
+                    <button
+                        id="dropdownDefaultButton"
+                        class="text-black text-center inline-flex items-center relative"
+                        type="button">Categories
+                        <svg
+                            class="w-2.5 h-2.5 ms-3"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewbox="0 0 10 6">
+                            <path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="m1 1 4 4 4-4"/>
+                        </svg>
+                    </button>
 
-        <!--------JS LINKS------>
-        <script type="text/javascript" src="js/pre-loading.js"></script>
-    </body>
-</html>
+                    <!-- Dropdown menu -->
+                    <div
+                        id="cdropdown"
+                        class="z-10 hidden absolute cdropdown bg-white divide-y divide-gray-100 rounded-lg shadow w-44 mt-3">
+                        <ul class="py-2 text-sm" aria-labelledby="dropdownDefaultButton">
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:font-medium">Apple</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:font-medium">HP</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:font-medium">Dell</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:font-medium">Lenovo</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:font-medium">Acer</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:font-medium">Asus</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:font-medium">Microsoft</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:font-medium">Samsung</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:font-medium">Toshiba</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:font-medium">MSI</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <vr class="h-6 w-px  mx-5 bg-gray-200 border-0 dark:bg-gray-300">
+                    <ul class="hidden justify-between gap-7 mx-5 md:flex">
+                        <li>
+                            <a href="index.html" class="hover:text-orange">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-orange transition duration-500 ease-in-out">Products</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-orange transition duration-500 ease-in-out">About</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-orange transition duration-500 ease-in-out">Shop</a>
+                        </li>
+                    </ul>
+                    <!---------HAMBURGER ICON---->
+                    <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
+                        <span class="hamburger-top"></span>
+                        <span class="hamburger-middle"></span>
+                        <span class="hamburger-bottom"></span>
+                    </button>
+                     <!------MOBILE MENU---->
+                     <div class="md:hidden">
+                        <div
+                            id="menu"
+                            class="absolute hidden flex-col px-8 py-8 mt-8 space-y-6 font-bold rounded-lg left-10 right-2 drop-shadow-md">
+                            <a href="index.html" class="hover:text-orange">Home</a>
+                            <a href="#" class="hover:text-orange transition duration-500 ease-in-out">Products</a>
+                            <a href="#" class="hover:text-orange transition duration-500 ease-in-out">About</a>
+                            <a href="#" class="hover:text-orange transition duration-500 ease-in-out">Shop</a>
+                            <a href="login.html" class="hover:text-orange transition duration-500 ease-in-out">Log In</a>
+                            <a href="register.html" class="hover:text-orange transition duration-500 ease-in-out">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!---------HERO SECTION---->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper mt-8">
+                        <div class="swiper-slide">
+                            <div
+                                class="block justify-between rounded-xl bg-orange mx-5 md:flex md:px-20 md:py-24 lg:mx-24 xl:mx-30"
+                                style="height: 500px;">
+                                <div class="px-3 md:w-1/2 text-white">
+                                    <h1 class="flex-col text-base pt-4 text-center font-extrabold md:text-left md:text-4xl">
+                                        Unleash Power and Performance with Cutting-Edge Laptops
+                                    </h1>
+                                    <p class="flex-col text-sm mt-3 text-center md:mt-10 md:text-left">
+                                        Uncover a world of innovation and speed with our collection of high-performance
+                                        laptops. From sleek ultrabooks to powerful gaming rigs, experience the latest in
+                                        technology designed to meet your every need. Elevate your computing experience
+                                        to new heights with our handpicked selection of top-tier laptops.
+                                    </p>
+                                    <div
+                                        class="hidden md:flex md:mt-10 md:ml-auto md:mr-0 mx-auto items-center flex-shrink-0 space-x-4">
+                                        <button
+                                            class="bg-black inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-800 focus:outline-none">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="currentColor"
+                                                class="w-6 h-6"
+                                                viewbox="0 0 512 512">
+                                                <path
+                                                    d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z"></path>
+                                            </svg>
+                                            <span class="ml-4 flex items-start flex-col leading-none">
+                                                <span class="text-xs text-white mb-1">GET IT ON</span>
+                                                <span class="title-font font-medium">Google Play</span>
+                                            </span>
+                                        </button>
+                                        <button
+                                            class="bg-black inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-800 focus:outline-none">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="currentColor"
+                                                class="w-6 h-6"
+                                                viewbox="0 0 305 305">
+                                                <path
+                                                    d="M40.74 112.12c-25.79 44.74-9.4 112.65 19.12 153.82C74.09 286.52 88.5 305 108.24 305c.37 0 .74 0 1.13-.02 9.27-.37 15.97-3.23 22.45-5.99 7.27-3.1 14.8-6.3 26.6-6.3 11.22 0 18.39 3.1 25.31 6.1 6.83 2.95 13.87 6 24.26 5.81 22.23-.41 35.88-20.35 47.92-37.94a168.18 168.18 0 0021-43l.09-.28a2.5 2.5 0 00-1.33-3.06l-.18-.08c-3.92-1.6-38.26-16.84-38.62-58.36-.34-33.74 25.76-51.6 31-54.84l.24-.15a2.5 2.5 0 00.7-3.51c-18-26.37-45.62-30.34-56.73-30.82a50.04 50.04 0 00-4.95-.24c-13.06 0-25.56 4.93-35.61 8.9-6.94 2.73-12.93 5.09-17.06 5.09-4.64 0-10.67-2.4-17.65-5.16-9.33-3.7-19.9-7.9-31.1-7.9l-.79.01c-26.03.38-50.62 15.27-64.18 38.86z"></path>
+                                                <path
+                                                    d="M212.1 0c-15.76.64-34.67 10.35-45.97 23.58-9.6 11.13-19 29.68-16.52 48.38a2.5 2.5 0 002.29 2.17c1.06.08 2.15.12 3.23.12 15.41 0 32.04-8.52 43.4-22.25 11.94-14.5 17.99-33.1 16.16-49.77A2.52 2.52 0 00212.1 0z"></path>
+                                            </svg>
+                                            <span class="ml-4 flex items-start flex-col leading-none">
+                                                <span class="text-xs text-white mb-1">Download on the</span>
+                                                <span class="title-font font-medium">App Store</span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="md:-mt-14">
+                                    <img
+                                        src="assets/images/hero1-removebg-preview.png"
+                                        alt="hero1-img"
+                                        class="w-72 h-72 md:w-auto md:h-auto object-contain mx-auto">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="block justify-between rounded-xl bg-orange mx-5 md:flex md:px-20 md:py-24 lg:mx-24 xl:mx-30"
+                                style="height: 500px;">
+                                <div class="px-3 md:w-1/2 text-white">
+                                    <h1 class="flex-col text-base pt-4 text-center font-extrabold md:text-left md:text-4xl">
+                                        Discover Elegance and Efficiency: Shop Stylish Laptops Today
+                                    </h1>
+                                    <p class="flex-col text-sm mt-3 text-center md:mt-10 md:text-left">
+                                        Elevate your style quotient while staying productive with our range of
+                                        sophisticated laptops. Combining form and function, our laptops are designed to
+                                        complement your lifestyle. Whether you're a professional on-the-go or a creative
+                                        mind seeking inspiration, find the perfect blend of elegance and efficiency in
+                                        our curated laptop collection.
+                                    </p>
+                                    <div
+                                        class="hidden md:flex md:mt-10 md:ml-auto md:mr-0 mx-auto items-center flex-shrink-0 space-x-4">
+                                        <button
+                                            class="bg-black inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-800 focus:outline-none">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="currentColor"
+                                                class="w-6 h-6"
+                                                viewbox="0 0 512 512">
+                                                <path
+                                                    d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z"></path>
+                                            </svg>
+                                            <span class="ml-4 flex items-start flex-col leading-none">
+                                                <span class="text-xs text-white mb-1">GET IT ON</span>
+                                                <span class="title-font font-medium">Google Play</span>
+                                            </span>
+                                        </button>
+                                        <button
+                                            class="bg-black inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-800 focus:outline-none">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="currentColor"
+                                                class="w-6 h-6"
+                                                viewbox="0 0 305 305">
+                                                <path
+                                                    d="M40.74 112.12c-25.79 44.74-9.4 112.65 19.12 153.82C74.09 286.52 88.5 305 108.24 305c.37 0 .74 0 1.13-.02 9.27-.37 15.97-3.23 22.45-5.99 7.27-3.1 14.8-6.3 26.6-6.3 11.22 0 18.39 3.1 25.31 6.1 6.83 2.95 13.87 6 24.26 5.81 22.23-.41 35.88-20.35 47.92-37.94a168.18 168.18 0 0021-43l.09-.28a2.5 2.5 0 00-1.33-3.06l-.18-.08c-3.92-1.6-38.26-16.84-38.62-58.36-.34-33.74 25.76-51.6 31-54.84l.24-.15a2.5 2.5 0 00.7-3.51c-18-26.37-45.62-30.34-56.73-30.82a50.04 50.04 0 00-4.95-.24c-13.06 0-25.56 4.93-35.61 8.9-6.94 2.73-12.93 5.09-17.06 5.09-4.64 0-10.67-2.4-17.65-5.16-9.33-3.7-19.9-7.9-31.1-7.9l-.79.01c-26.03.38-50.62 15.27-64.18 38.86z"></path>
+                                                <path
+                                                    d="M212.1 0c-15.76.64-34.67 10.35-45.97 23.58-9.6 11.13-19 29.68-16.52 48.38a2.5 2.5 0 002.29 2.17c1.06.08 2.15.12 3.23.12 15.41 0 32.04-8.52 43.4-22.25 11.94-14.5 17.99-33.1 16.16-49.77A2.52 2.52 0 00212.1 0z"></path>
+                                            </svg>
+                                            <span class="ml-4 flex items-start flex-col leading-none">
+                                                <span class="text-xs text-white mb-1">Download on the</span>
+                                                <span class="title-font font-medium">App Store</span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="md:-mt-14">
+                                    <img
+                                        src="assets/images/hero2-removebg-preview.png"
+                                        alt="hero2-img"
+                                        class="w-72 h-72 md:w-auto md:h-auto object-contain mx-auto">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="block justify-between rounded-xl bg-orange mx-5 md:flex md:px-20 md:py-24 lg:mx-24 xl:mx-30"
+                                style="height: 500px;">
+                                <div class="px-3 md:w-1/2 text-white">
+                                    <h1 class="flex-col text-base pt-4 text-center font-extrabold md:text-left md:text-4xl">
+                                        Game On: Dominate the Battlefield with Gaming Laptops
+                                    </h1>
+                                    <p class="flex-col text-sm mt-3 text-center md:mt-10 md:text-left">
+                                        Immerse yourself in the world of gaming like never before with our powerful
+                                        gaming laptops. Unleash the full potential of your favorite titles with
+                                        cutting-edge graphics and high-speed processors. From FPS enthusiasts to
+                                        strategy masters, conquer every level with the ultimate gaming experience at
+                                        your fingertips.
+                                    </p>
+                                    <div
+                                        class="hidden md:flex md:mt-10 md:ml-auto md:mr-0 mx-auto items-center flex-shrink-0 space-x-4">
+                                        <button
+                                            class="bg-black inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-800 focus:outline-none">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="currentColor"
+                                                class="w-6 h-6"
+                                                viewbox="0 0 512 512">
+                                                <path
+                                                    d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z"></path>
+                                            </svg>
+                                            <span class="ml-4 flex items-start flex-col leading-none">
+                                                <span class="text-xs text-white mb-1">GET IT ON</span>
+                                                <span class="title-font font-medium">Google Play</span>
+                                            </span>
+                                        </button>
+                                        <button
+                                            class="bg-black inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-800 focus:outline-none">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="currentColor"
+                                                class="w-6 h-6"
+                                                viewbox="0 0 305 305">
+                                                <path
+                                                    d="M40.74 112.12c-25.79 44.74-9.4 112.65 19.12 153.82C74.09 286.52 88.5 305 108.24 305c.37 0 .74 0 1.13-.02 9.27-.37 15.97-3.23 22.45-5.99 7.27-3.1 14.8-6.3 26.6-6.3 11.22 0 18.39 3.1 25.31 6.1 6.83 2.95 13.87 6 24.26 5.81 22.23-.41 35.88-20.35 47.92-37.94a168.18 168.18 0 0021-43l.09-.28a2.5 2.5 0 00-1.33-3.06l-.18-.08c-3.92-1.6-38.26-16.84-38.62-58.36-.34-33.74 25.76-51.6 31-54.84l.24-.15a2.5 2.5 0 00.7-3.51c-18-26.37-45.62-30.34-56.73-30.82a50.04 50.04 0 00-4.95-.24c-13.06 0-25.56 4.93-35.61 8.9-6.94 2.73-12.93 5.09-17.06 5.09-4.64 0-10.67-2.4-17.65-5.16-9.33-3.7-19.9-7.9-31.1-7.9l-.79.01c-26.03.38-50.62 15.27-64.18 38.86z"></path>
+                                                <path
+                                                    d="M212.1 0c-15.76.64-34.67 10.35-45.97 23.58-9.6 11.13-19 29.68-16.52 48.38a2.5 2.5 0 002.29 2.17c1.06.08 2.15.12 3.23.12 15.41 0 32.04-8.52 43.4-22.25 11.94-14.5 17.99-33.1 16.16-49.77A2.52 2.52 0 00212.1 0z"></path>
+                                            </svg>
+                                            <span class="ml-4 flex items-start flex-col leading-none">
+                                                <span class="text-xs text-white mb-1">Download on the</span>
+                                                <span class="title-font font-medium">App Store</span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="md:-mt-14">
+                                    <img
+                                        src="assets/images/hero3_-removebg-preview.png"
+                                        alt="hero3-img"
+                                        class="w-72 h-72 md:w-auto md:h-auto object-contain mx-auto">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="block justify-between rounded-xl bg-orange mx-5 md:flex md:px-20 md:py-24 lg:mx-24 xl:mx-30"
+                                style="height: 500px;">
+                                <div class="px-3 md:w-1/2 text-white">
+                                    <h1 class="flex-col text-base pt-4 text-center font-extrabold md:text-left md:text-4xl">
+                                        Empower Learning: Transform Education with Smart Laptops
+                                    </h1>
+                                    <p class="flex-col text-sm mt-3 text-center md:mt-10 md:text-left">
+                                        Open the door to a world of knowledge with our smart and versatile laptops
+                                        designed for education. From interactive learning experiences to collaborative
+                                        study sessions, our range of laptops empowers students and educators alike. Join
+                                        the future of education and revolutionize the way you learn with our innovative
+                                        laptop solutions.
+                                    </p>
+                                    <div
+                                        class="hidden md:flex md:mt-10 md:ml-auto md:mr-0 mx-auto items-center flex-shrink-0 space-x-4">
+                                        <button
+                                            class="bg-black inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-800 focus:outline-none">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="currentColor"
+                                                class="w-6 h-6"
+                                                viewbox="0 0 512 512">
+                                                <path
+                                                    d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z"></path>
+                                            </svg>
+                                            <span class="ml-4 flex items-start flex-col leading-none">
+                                                <span class="text-xs text-white mb-1">GET IT ON</span>
+                                                <span class="title-font font-medium">Google Play</span>
+                                            </span>
+                                        </button>
+                                        <button
+                                            class="bg-black inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-800 focus:outline-none">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="currentColor"
+                                                class="w-6 h-6"
+                                                viewbox="0 0 305 305">
+                                                <path
+                                                    d="M40.74 112.12c-25.79 44.74-9.4 112.65 19.12 153.82C74.09 286.52 88.5 305 108.24 305c.37 0 .74 0 1.13-.02 9.27-.37 15.97-3.23 22.45-5.99 7.27-3.1 14.8-6.3 26.6-6.3 11.22 0 18.39 3.1 25.31 6.1 6.83 2.95 13.87 6 24.26 5.81 22.23-.41 35.88-20.35 47.92-37.94a168.18 168.18 0 0021-43l.09-.28a2.5 2.5 0 00-1.33-3.06l-.18-.08c-3.92-1.6-38.26-16.84-38.62-58.36-.34-33.74 25.76-51.6 31-54.84l.24-.15a2.5 2.5 0 00.7-3.51c-18-26.37-45.62-30.34-56.73-30.82a50.04 50.04 0 00-4.95-.24c-13.06 0-25.56 4.93-35.61 8.9-6.94 2.73-12.93 5.09-17.06 5.09-4.64 0-10.67-2.4-17.65-5.16-9.33-3.7-19.9-7.9-31.1-7.9l-.79.01c-26.03.38-50.62 15.27-64.18 38.86z"></path>
+                                                <path
+                                                    d="M212.1 0c-15.76.64-34.67 10.35-45.97 23.58-9.6 11.13-19 29.68-16.52 48.38a2.5 2.5 0 002.29 2.17c1.06.08 2.15.12 3.23.12 15.41 0 32.04-8.52 43.4-22.25 11.94-14.5 17.99-33.1 16.16-49.77A2.52 2.52 0 00212.1 0z"></path>
+                                            </svg>
+                                            <span class="ml-4 flex items-start flex-col leading-none">
+                                                <span class="text-xs text-white mb-1">Download on the</span>
+                                                <span class="title-font font-medium">App Store</span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="md:-mt-14">
+                                    <img
+                                        src="assets/images/hero4-removebg-preview.png"
+                                        alt="hero4-img"
+                                        class="w-72 h-72 md:w-auto md:h-auto object-contain mx-auto">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <!--------FLASH SALES----->
+                <section class="mb-5">
+                    <div class="flex gap-3  mt-16 mx-5 md:px-3 lg:mx-24 xl:mx-30">
+                        <span class="p-2 bg-orange"></span>
+                        <p class="font-medium text-amber-400 text-3xl">Flash Sales</p>
+                    </div>
+                    <div class="flex justify-between mt-4 mx-5 md:px-3 lg:mx-24 xl:mx-30">
+                        <p id="demo" class="text-lg font-bold md:text-3xl"></p>
+                        <a
+                            href="#"
+                            class="flex gap-1 place-items-center text-lg hover:translate-x-2 transition duration-500 ease-in-out">
+                            <p>View More</p>
+                            <i class='bx bx-arrow-back bx-flip-horizontal'></i>
+                        </a>
+                    </div>
+                    <div
+                        class="grid grid-cols-2 gap-5 md:gap-10 mx-5 md:px-3 md:grid-cols-3 lg:mx-24 lg:grid-cols-4 xl:mx-30">
+                        <div class="bg-white shadow-lg rounded-xl mt-5">
+                            <a href="#">
+                                <div class="flash-img">
+                                    <img src="assets/images/flash6.webp" alt="sales6-img">
+                                </div>
+                            </a>
+                            <div class="p-2">
+                                <div class="flex gap-2 place-items-center md:gap-5">
+                                    <p class="text-base font-extrabold md:text-lg">$1550.00</p>
+                                    <p class="text-sm font-light line-through md:text-base">$1759.00</p>
+                                </div>
+                                <p class="font-semibold">MacBook Air M2 | 512GB | 8GB | 13-inch</p>
+                                <p class="text-sm text-gray-500 mt-2">
+                                    13-inch MacBook Air M2 with a powerful 8-core Apple M2 chip, 512GB storage, and
+                                    8GB RAM
+                                </p>
+                                <div class="justify-between mt-4 place-items-center md:flex md:mt-2">
+                                    <div class="flex place-items-center mb-2 md:mb-0">
+                                        <i class='bx bxs-star text-orange'></i>
+                                        <i class='bx bxs-star text-orange'></i>
+                                        <i class='bx bxs-star text-orange'></i>
+                                        <i class='bx bxs-star-half text-orange'></i>
+                                        <i class='bx bx-star text-orange'></i>
+                                        <p>(38)</p>
+                                    </div>
+                                    <a
+                                        href="#"
+                                        class="flex justify-center px-2 py-2 bg-orange text-white font-semibold rounded-xl hover:bg-amber-500 transition duration-500 ease-in-out">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white shadow-lg rounded-xl mt-5">
+                            <a href="#">
+                                <div class="flash-img2">
+                                    <img src="assets/images/flash3.webp" alt="sales3-img">
+                                </div>
+                            </a>
+                            <div class="p-2">
+                                <div class="flex gap-2 place-items-center md:gap-5">
+                                    <p class="text-base font-extrabold md:text-lg">$699.99</p>
+                                    <p class="text-sm font-light line-through md:text-base">$999.99</p>
+                                </div>
+                                <p class="font-semibold">ASUS® ZenBook 13 Ultra-Slim Laptop</p>
+                                <p class="text-sm text-gray-500 mt-2">
+                                    13.3" Screen, Intel® Core™ i7, 8GB Memory, 512GB Solid State Drive...
+                                </p>
+                                <div class="justify-between mt-9 place-items-center md:flex md:mt-2">
+                                    <div class="flex place-items-center mb-2 md:mb-0">
+                                        <i class='bx bxs-star text-orange'></i>
+                                        <i class='bx bxs-star text-orange'></i>
+                                        <i class='bx bxs-star text-orange'></i>
+                                        <i class='bx bxs-star text-orange'></i>
+                                        <i class='bx bxs-star-half text-orange'></i>
+                                        <p>(25)</p>
+                                    </div>
+                                    <a
+                                        href="#"
+                                        class="flex justify-center px-2 py-2 bg-orange text-white font-semibold rounded-xl hover:bg-amber-500 transition duration-500 ease-in-out">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white shadow-lg rounded-xl mt-5">
+                            <a href="#">
+                                <div class="flash-img">
+                                    <img src="assets/images/flash4.jpg" alt="sales4-img">
+                                </div>
+                            </a>
+                            <div class="p-2">
+                                <div class="flex gap-2 place-items-center md:gap-5">
+                                    <p class="text-base font-extrabold md:text-lg">$1100.00</p>
+                                    <p class="text-sm font-light line-through md:text-base">$1286.99</p>
+                                </div>
+                                <p class="font-semibold">Asus ROG Strix G17 Gaming Laptop</p>
+                                <p class="text-sm text-gray-500 mt-2">
+                                    17.3" Screen, Intel® Core™ i7, 8GB Memory, 512GB Solid State Drive...
+                                </p>
+                                <div class="justify-between mt-10 place-items-center md:flex md:mt-2">
+                                    <div class="flex place-items-center mb-2 md:mb-0">
+                                        <i class='bx bxs-star text-orange'></i>
+                                        <i class='bx bxs-star text-orange'></i>
+                                        <i class='bx bxs-star text-orange'></i>
+                                        <i class='bx bxs-star-half text-orange'></i>
+                                        <i class='bx bx-star text-orange'></i>
+                                        <p>(34)</p>
+                                    </div>
+                                    <a
+                                        href="#"
+                                        class="flex justify-center px-2 py-2 bg-orange text-white font-semibold rounded-xl hover:bg-amber-500 transition duration-500 ease-in-out">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white shadow-lg rounded-xl mt-5">
+                            <a href="#">
+                                <div class="flash-img">
+                                    <img src="assets/images/flash5.webp" alt="sales5-img">
+                                </div>
+                            </a>
+                            <div class="p-2">
+                                <div class="flex gap-2 place-items-center md:gap-5">
+                                    <p class="text-base font-extrabold md:text-lg">$2500.00</p>
+                                    <p class="text-sm font-light line-through md:text-base">$2699.00</p>
+                                </div>
+                                <p class="font-semibold">MSI Stealth GS66 12UGS</p>
+                                <p class="text-sm text-gray-500 mt-2">
+                                    15.6" Gaming Notebook - Intel Core i9 - 32 GB Total RAM - 1 TB SSD - Core Black-
+                                    Windows 11 Home
+                                </p>
+                                <div class="justify-between mt-6 place-items-center md:flex md:mt-2">
+                                    <div class="flex place-items-center mb-2 md:mb-0">
+                                        <i class='bx bxs-star text-orange'></i>
+                                        <i class='bx bxs-star text-orange'></i>
+                                        <i class='bx bxs-star text-orange'></i>
+                                        <i class='bx bxs-star text-orange'></i>
+                                        <i class='bx bxs-star text-orange'></i>
+                                        <p>(45)</p>
+                                    </div>
+                                    <a
+                                        href="#"
+                                        class="flex justify-center px-2 py-2 bg-orange text-white font-semibold rounded-xl hover:bg-amber-500 transition duration-500 ease-in-out">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-----TOP SELLERS---->
+                <section class="mx-5 mt-14 md:px-3 lg:mx-24 xl:mx-30">
+                    <h2 class="font-bold text-3xl">Top Sellers</h2>
+                    <div class="brand-carousel section-padding owl-carousel">
+                        <div class="single-logo">
+                            <img
+                                src="assets/images/apple-logo-removebg-preview.png"
+                                alt="apple-logo"
+                                class="w-2 h-12 md:w-5 md:h-16 object-contain">
+                        </div>
+                        <div class="single-logo">
+                            <img
+                                src="assets/images/AsusTek-black-logo-removebg-preview.png"
+                                alt="asus-logo"
+                                class="w-2 h-12 md:w-5 md:h-16 object-contain">
+                        </div>
+                        <div class="single-logo">
+                            <img
+                                src="assets/images/hp-removebg-preview.png"
+                                alt="hp-logo"
+                                class="w-2 h-12 md:w-5 md:h-16 object-contain">
+                        </div>
+                        <div class="single-logo">
+                            <img
+                                src="assets/images/Lenovo-Logo-PNG-Picture-removebg-preview.png"
+                                alt="lenovo-logo"
+                                class="w-2 h-12 md:w-5 md:h-16 object-contain">
+                        </div>
+                        <div class="single-logo">
+                            <img
+                                src="assets/images/samsung-removebg-preview.png"
+                                alt="samsung-logo"
+                                class="w-2 h-12 md:w-5 md:h-16 object-contain">
+                        </div>
+                        <div class="single-logo">
+                            <img
+                                src="assets/images/msi-removebg-preview.png"
+                                alt="msi-logo"
+                                class="w-2 h-12 md:w-5 md:h-16 object-contain">
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!--------JS LINKS------>
+            <script type="text/javascript" src="js/pre-loading.js"></script>
+            <script type="text/javascript" src="js/dropdown.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            <script type="text/javascript" src="js/swiper.js"></script>
+            <script type="text/javascript" src="js/app.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+        </body>
+    </html>
