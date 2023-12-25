@@ -5,5 +5,5 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
         document.querySelector(".preloader").style.display = "none";
         document.querySelector(".content").style.display = "block";
-    }, 5000); // Change the delay time (in milliseconds) as needed
+    }, 1000); // Change the delay time (in milliseconds) as needed
 });
