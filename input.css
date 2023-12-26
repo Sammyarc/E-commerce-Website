@@ -71,11 +71,6 @@ figure {
     height: 40px;
     border: 2px solid orange;
 }
-@media (max-width: 480px) {
-  .search-container{
-    height: 30px;
-  }
-}
 .search-input{
     width: 95%;
     height: 100%;
@@ -83,6 +78,10 @@ figure {
     outline: none;
     padding-left: 20px;
     padding-right: 20px;
+}
+.search-icon{
+  padding-top: 9px;
+  padding-bottom: 8px;
 }
 .cart-container {
     position: relative;
@@ -163,26 +162,19 @@ figure {
   transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
 
+@media (max-width: 768px) {
+  .search-icon{
+    padding: 9px 6px;
+    font-size: 20px;
+   }
+}
+
+
 /***  END OF NAVIGATION ***/
 
 /*** HERO SECTIONS ***/
 
-.swiper {
-  width: 100%;
-  height: 100%;
-}
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.swiper-pagination{
-  color: orange;
-}
 
 /*** END OF HERO SECTIONS ***/
 
