@@ -1,2 +1,2 @@
 # E-commerce-Website
-A digital e-commerce website created usinhg html, tailwindcss and vanilla javascript
+A digital e-commerce website created using html, tailwindcss and vanilla javascript
