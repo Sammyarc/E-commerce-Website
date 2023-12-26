@@ -29,145 +29,152 @@
         </figure>
         <!-------MAIN CONTENT---->
         <section class="content">
-            <!-----NAVIGATION----->
-            <div class="flex justify-between place-items-center p-1 mt-2 mx-5 gap-4 md:p-3 lg:mx-24 xl:mx-30">
-                <!-----LOGO---->
-                <div class="flex gap-3 place-items-center">
-                    <i
-                        class='bx bx-cart text-white p-1 lg:p-2 border-orange border bg-orange rounded-full text-2xl'></i>
-                    <span class="text-2xl font-bold hidden md:block">SwiftCart</span>
-                </div>
-                <!----SEARCH COMPONENT---->
-                <div class="search-container rounded-full place-items-center">
-                    <input
-                        type="text"
-                        id="search-input"
-                        placeholder="Search for products"
-                        class="search-input rounded-full">
-                    <i
-                        class='bx bx-search text-xl bg-orange rounded-r-full py-1 px-1 lg:py-2 lg:px-3 text-white cursor-pointer'></i>
-                </div>
-                <!-----ICONS-->
-                <div class="flex justify-between gap-2 mt-1">
-                    <div class="flex gap-1 place-items-center md:gap-7">
-                        <div class="notification-container">
-                            <i class='bx bx-bell text-2xl lg:text-3xl'></i>
-                            <span class="notification-count"></span>
-                        </div>
-                        <div class="cart-container">
-                            <i class='bx bx-cart text-2xl lg:text-3xl'></i>
-                            <span class="cart-count"></span>
-                        </div>
-                        <!-------BUTTONS----->
-                        <div class="flex justify-between place-items-center gap-2">
-                            <a
-                                href="login.html"
-                                class="hidden px-4 py-2 border bg-orange text-white rounded-xl hover:bg-amber-500 transition duration-500 ease-in-out md:flex">Log In</a>
-                            <a
-                                href="register.html"
-                                class="hidden px-5 py-2 border bg-orange text-white rounded-xl hover:bg-amber-500 transition duration-500 ease-in-out md:flex">Sign Up</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-300">
-            <!-------MINI NAV----->
-            <div class="flex mx-5 md:px-3 lg:mx-24 xl:mx-30">
-                <div>
-                    <button
-                        id="dropdownDefaultButton"
-                        class="text-black text-center inline-flex items-center relative"
-                        type="button">Categories
-                        <svg
-                            class="w-2.5 h-2.5 ms-3"
-                            aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewbox="0 0 10 6">
-                            <path
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="m1 1 4 4 4-4"/>
-                        </svg>
-                    </button>
+           <!-----NAVIGATION----->
+           <div
+           class="flex justify-between place-items-center p-1 mt-2 mx-5 gap-4 md:p-3 lg:mx-5">
+           <!-----LOGO---->
+           <div class="flex gap-3 place-items-center">
+               <i
+                   class='bx bx-cart text-white p-1 lg:p-2 border-orange border bg-orange rounded-full text-2xl'></i>
+               <span class="text-2xl font-bold hidden md:block">SwiftCart</span>
+           </div>
+           <!----SEARCH COMPONENT---->
+           <div class="search-container rounded-full place-items-center">
+               <input
+                   type="text"
+                   id="search-input"
+                   placeholder="Search for products"
+                   class="search-input rounded-full">
+               <i
+                   class='bx bx-search search-icon md:text-xl bg-orange rounded-r-full text-white cursor-pointer md:px-1.5 lg:py-2.5 lg:px-3.5 '></i>
+           </div>
+           <!-----ICONS-->
+           <div class="flex justify-between gap-2 mt-1">
+               <div class="flex gap-1 place-items-center md:gap-2 lg:gap-4 xl:gap-7">
+                   <div class="notification-container">
+                       <i class='bx bx-bell text-2xl lg:text-3xl'></i>
+                       <span class="notification-count"></span>
+                   </div>
+                   <div class="cart-container">
+                       <i class='bx bx-cart text-2xl lg:text-3xl'></i>
+                       <span class="cart-count"></span>
+                   </div>
+                   <!-------BUTTONS----->
+                   <div class="flex justify-between place-items-center gap-2">
+                       <a
+                           href="login.html"
+                           class="hidden border bg-orange text-white rounded-xl hover:bg-amber-500 transition duration-500 ease-in-out lg:flex lg:px-1 lg:py-2 xl:px-4 xl:py-2">Log In</a>
+                       <a
+                           href="register.html"
+                           class="hidden border bg-orange text-white rounded-xl hover:bg-amber-500 transition duration-500 ease-in-out lg:flex lg:px-1 lg:py-2 xl:px-4 xl:py-2">Sign Up</a>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-300">
+       <!-------MINI NAV----->
+       <div class="flex mx-5 md:px-3 lg:mx-8">
+           <div>
+               <button
+                   id="dropdownDefaultButton"
+                   class="text-black text-center inline-flex items-center relative"
+                   type="button">Categories
+                   <svg
+                       class="w-2.5 h-2.5 ms-3"
+                       aria-hidden="true"
+                       xmlns="http://www.w3.org/2000/svg"
+                       fill="none"
+                       viewbox="0 0 10 6">
+                       <path
+                           stroke="currentColor"
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           stroke-width="2"
+                           d="m1 1 4 4 4-4"/>
+                   </svg>
+               </button>
 
-                    <!-- Dropdown menu -->
-                    <div
-                        id="cdropdown"
-                        class="z-10 hidden absolute cdropdown bg-white divide-y divide-gray-100 rounded-lg shadow w-44 mt-3">
-                        <ul class="py-2 text-sm" aria-labelledby="dropdownDefaultButton">
-                            <li>
-                                <a href="#" class="block px-4 py-2 hover:font-medium">Apple</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block px-4 py-2 hover:font-medium">HP</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block px-4 py-2 hover:font-medium">Dell</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block px-4 py-2 hover:font-medium">Lenovo</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block px-4 py-2 hover:font-medium">Acer</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block px-4 py-2 hover:font-medium">Asus</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block px-4 py-2 hover:font-medium">Microsoft</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block px-4 py-2 hover:font-medium">Samsung</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block px-4 py-2 hover:font-medium">Toshiba</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block px-4 py-2 hover:font-medium">MSI</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <vr class="h-6 w-px  mx-5 bg-gray-200 border-0 dark:bg-gray-300">
-                    <ul class="hidden justify-between gap-7 mx-5 md:flex">
-                        <li>
-                            <a href="index.html" class="hover:text-orange">Home</a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:text-orange transition duration-500 ease-in-out">Products</a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:text-orange transition duration-500 ease-in-out">About</a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:text-orange transition duration-500 ease-in-out">Shop</a>
-                        </li>
-                    </ul>
-                    <!---------HAMBURGER ICON---->
-                    <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
-                        <span class="hamburger-top"></span>
-                        <span class="hamburger-middle"></span>
-                        <span class="hamburger-bottom"></span>
-                    </button>
-                     <!------MOBILE MENU---->
-                     <div class="md:hidden">
-                        <div
-                            id="menu"
-                            class="absolute hidden flex-col px-8 py-8 mt-8 space-y-6 font-bold rounded-lg left-10 right-2 drop-shadow-md">
-                            <a href="index.html" class="hover:text-orange">Home</a>
-                            <a href="#" class="hover:text-orange transition duration-500 ease-in-out">Products</a>
-                            <a href="#" class="hover:text-orange transition duration-500 ease-in-out">About</a>
-                            <a href="#" class="hover:text-orange transition duration-500 ease-in-out">Shop</a>
-                            <a href="login.html" class="hover:text-orange transition duration-500 ease-in-out">Log In</a>
-                            <a href="register.html" class="hover:text-orange transition duration-500 ease-in-out">Sign Up</a>
-                        </div>
-                    </div>
-                </div>
+               <!-- Dropdown menu -->
+               <div
+                   id="cdropdown"
+                   class="z-10 hidden absolute cdropdown bg-white divide-y divide-gray-100 rounded-lg shadow w-44 mt-3">
+                   <ul class="py-2 text-sm" aria-labelledby="dropdownDefaultButton">
+                       <li>
+                           <a href="#" class="block px-4 py-2 hover:font-medium">Apple</a>
+                       </li>
+                       <li>
+                           <a href="#" class="block px-4 py-2 hover:font-medium">HP</a>
+                       </li>
+                       <li>
+                           <a href="#" class="block px-4 py-2 hover:font-medium">Dell</a>
+                       </li>
+                       <li>
+                           <a href="#" class="block px-4 py-2 hover:font-medium">Lenovo</a>
+                       </li>
+                       <li>
+                           <a href="#" class="block px-4 py-2 hover:font-medium">Acer</a>
+                       </li>
+                       <li>
+                           <a href="#" class="block px-4 py-2 hover:font-medium">Asus</a>
+                       </li>
+                       <li>
+                           <a href="#" class="block px-4 py-2 hover:font-medium">Microsoft</a>
+                       </li>
+                       <li>
+                           <a href="#" class="block px-4 py-2 hover:font-medium">Samsung</a>
+                       </li>
+                       <li>
+                           <a href="#" class="block px-4 py-2 hover:font-medium">Toshiba</a>
+                       </li>
+                       <li>
+                           <a href="#" class="block px-4 py-2 hover:font-medium">MSI</a>
+                       </li>
+                   </ul>
+               </div>
+           </div>
+           <vr class="h-6 w-px  mx-5 bg-gray-200 border-0 dark:bg-gray-300">
+               <ul class="hidden justify-between gap-7 mx-5 lg:flex">
+                   <li>
+                       <a href="index.html" class="hover:text-orange">Home</a>
+                   </li>
+                   <li>
+                       <a href="#" class="hover:text-orange transition duration-500 ease-in-out">Products</a>
+                   </li>
+                   <li>
+                       <a href="#" class="hover:text-orange transition duration-500 ease-in-out">About</a>
+                   </li>
+                   <li>
+                       <a href="#" class="hover:text-orange transition duration-500 ease-in-out">Shop</a>
+                   </li>
+               </ul>
+               <!---------HAMBURGER ICON---->
+               <button id="menu-btn" class="block hamburger lg:hidden focus:outline-none">
+                   <span class="hamburger-top"></span>
+                   <span class="hamburger-middle"></span>
+                   <span class="hamburger-bottom"></span>
+               </button>
+               <!------MOBILE MENU---->
+               <div class="lg:hidden">
+                   <div
+                       id="menu"
+                       class="absolute hidden flex-col px-8 py-8 mt-8 space-y-6 font-bold rounded-lg left-10 md:left-60 right-2 drop-shadow-md">
+                       <a href="index.html" class="hover:text-orange">Home</a>
+                       <a href="#" class="hover:text-orange transition duration-500 ease-in-out">Products</a>
+                       <a href="#" class="hover:text-orange transition duration-500 ease-in-out">About</a>
+                       <a href="#" class="hover:text-orange transition duration-500 ease-in-out">Shop</a>
+                       <a
+                           href="login.html"
+                           class="hover:text-orange transition duration-500 ease-in-out">Log In</a>
+                       <a
+                           href="register.html"
+                           class="hover:text-orange transition duration-500 ease-in-out">Sign Up</a>
+                   </div>
+               </div>
+           </div>
+
+
             <!-----DETAILS-->
-            <div class="flex flex-col md:flex-row justify-center gap-4">
+            <div class="flex flex-col md:flex-row justify-center lg:gap-24">
                 <!-----LEFT ITEM-->
                 <div class="max-w-2xl mt-16 md:mt-40">
                     <img src="assets/images/login.avif" alt="signup-img">
