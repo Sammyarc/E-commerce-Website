@@ -17,6 +17,7 @@ var swiper = new Swiper(".mySwiper", {
     var brandCarousel = document.querySelector('.brand-carousel');
     var flashCarousel = document.querySelector('.flash-carousel');
     var productCarousel = document.querySelector('.product-carousel');
+    var postCarousel = document.querySelector('.post-carousel');
 
     // Initialize both carousels with different timeouts
     initializeCarousel(brandCarousel, {
@@ -70,6 +71,24 @@ var swiper = new Swiper(".mySwiper", {
             }
         }
     }, 1200);
+
+    initializeCarousel(postCarousel, {
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            1200: {
+                items: 4
+            }
+        }
+    }, 1000);
 });
 
 // Reusable function to initialize Owl Carousel
