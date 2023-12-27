@@ -172,11 +172,6 @@ figure {
 
 /***  END OF NAVIGATION ***/
 
-/*** HERO SECTIONS ***/
-
-
-
-/*** END OF HERO SECTIONS ***/
 
 /*** FLASH SALES ***/
 
@@ -205,8 +200,8 @@ figure {
 }
 @media (max-width: 480px) {
   .flash-img, .flash-img2{
-    width: 120px;
-    height: 80px;
+    width: 150px;
+    height: 110px;
   }
 }
 
