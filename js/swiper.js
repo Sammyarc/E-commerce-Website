@@ -16,6 +16,7 @@ var swiper = new Swiper(".mySwiper", {
     // Selectors for both carousels
     var brandCarousel = document.querySelector('.brand-carousel');
     var flashCarousel = document.querySelector('.flash-carousel');
+    var productCarousel = document.querySelector('.product-carousel');
 
     // Initialize both carousels with different timeouts
     initializeCarousel(brandCarousel, {
@@ -39,8 +40,24 @@ var swiper = new Swiper(".mySwiper", {
     initializeCarousel(flashCarousel, {
         loop: true,
         margin: 10,
-        autoplay: true,
-        autoplayHoverPause: true,
+        autoplay: false,
+        responsive: {
+            0: {
+                items: 2
+            },
+            768: {
+                items: 2
+            },
+            1200: {
+                items: 4
+            }
+        }
+    }, 1200);
+
+    initializeCarousel(productCarousel, {
+        loop: true,
+        margin: 10,
+        autoplay: false,
         responsive: {
             0: {
                 items: 2
