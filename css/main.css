@@ -726,6 +726,22 @@ video {
   height: 1px;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+.h-11 {
+  height: 2.75rem;
+}
+
+.h-1 {
+  height: 0.25rem;
+}
+
 .w-2 {
   width: 0.5rem;
 }
@@ -752,6 +768,18 @@ video {
 
 .w-px {
   width: 1px;
+}
+
+.w-1 {
+  width: 0.25rem;
+}
+
+.w-1\.5 {
+  width: 0.375rem;
+}
+
+.w-11 {
+  width: 2.75rem;
 }
 
 .max-w-2xl {
@@ -1174,6 +1202,38 @@ video {
 
 .accent-orange {
   accent-color: #FB8B24;
+}
+
+.bg-blend-overlay {
+  background-blend-mode: overlay;
+}
+
+.bg-blend-lighten {
+  background-blend-mode: lighten;
+}
+
+.bg-blend-color-dodge {
+  background-blend-mode: color-dodge;
+}
+
+.bg-blend-color-burn {
+  background-blend-mode: color-burn;
+}
+
+.bg-blend-hard-light {
+  background-blend-mode: hard-light;
+}
+
+.bg-blend-exclusion {
+  background-blend-mode: exclusion;
+}
+
+.bg-blend-saturation {
+  background-blend-mode: saturation;
+}
+
+.bg-blend-color {
+  background-blend-mode: color;
 }
 
 .shadow {
