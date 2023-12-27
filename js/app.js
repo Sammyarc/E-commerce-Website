@@ -65,3 +65,24 @@ categoryBtn.addEventListener('click', () => {
         toggleMenu();
     }
 });
+
+
+
+// Search display function
+document.addEventListener("DOMContentLoaded", function () {
+    const searchBtn = document.getElementById('searchBtn');
+    const searchBox = document.querySelector('.search-box');
+    const closeBtn = document.getElementById('closeBtn');
+
+    searchBtn.addEventListener('click', function () {
+        searchBox.style.display = 'flex';
+        searchBtn.style.display = 'none';
+        closeBtn.style.display = 'block';
+    });
+
+    closeBtn.addEventListener('click', function () {
+        searchBox.style.display = 'none';
+        searchBtn.style.display = 'block';
+        closeBtn.style.display = 'none';
+    });
+});
