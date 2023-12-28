@@ -87,6 +87,18 @@ document.addEventListener('DOMContentLoaded', function () {
         filterDropdown.classList.add('hidden');
     }
 
+    function handleDocumentClick(event) {
+        const isMenuClicked = event.target.closest('#menu-btn') || event.target.closest('#menu');
+        const isCategoryDropdownClicked = event.target.closest('#cdropdown') || event.target.closest('#dropdownDefaultButton');
+        const isFilterDropdownClicked = event.target.closest('#fdropdown') || event.target.closest('#filterDefaultButton');
+        const isSortDropdownClicked = event.target.closest('#dropdownSortCheckbox') || event.target.closest('#dropdownSortButton');
+
+        if (!isMenuClicked && !isCategoryDropdownClicked && !isFilterDropdownClicked && !isSortDropdownClicked) {
+            closeMenu();
+            closeDropdowns();
+        }
+    }
+
     btn.addEventListener('click', () => {
         toggleMenu();
         closeDropdowns();
@@ -107,6 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
         closeMenu();
     });
 
+    document.addEventListener('click', handleDocumentClick);
 });
 
 
