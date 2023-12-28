@@ -127,36 +127,7 @@ figure {
     }
 }
 
-.cart-container {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-.cart-count {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: #ff0000; /* Change the background color as needed */
-    color: #fff; /* Change the text color as needed */
-    border-radius: 50%;
-    padding: 6px 6px;
-    font-size: 9px;
-}
-.notification-container{
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-.notification-count{
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: #ff0000; /* Change the background color as needed */
-    color: #fff; /* Change the text color as needed */
-    border-radius: 50%;
-    padding: 6px 6px;
-    font-size: 9px;
-}
+
 .rotated {
   transform: rotate(180deg);
   transition: transform 0.5s ease-in-out;
