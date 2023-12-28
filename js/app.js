@@ -30,6 +30,8 @@ var x = setInterval(function() {
 
 // DROPDOWNS
 
+
+
 document.addEventListener('DOMContentLoaded', function () {
     const btn = document.getElementById('menu-btn');
     const nav = document.getElementById('menu');
@@ -39,17 +41,26 @@ document.addEventListener('DOMContentLoaded', function () {
     const filterDropdown = document.getElementById('fdropdown');
     const filterBtn = document.getElementById('filterDefaultButton');
     const filterIcon = document.getElementById('filterIcon');
+    const dropdownSortCheckbox = document.getElementById('dropdownSortCheckbox');
+    const dropdownSortButton = document.getElementById('dropdownSortButton');
+    const sortIcon = document.getElementById('sortIcon');
 
+    function closeMenu() {
+        if (nav.classList.contains('flex')) {
+            toggleMenu();
+        }
+    }
+    
     function closeDropdowns() {
         categoryDropdown.classList.add('hidden');
         filterDropdown.classList.add('hidden');
+        dropdownSortCheckbox.classList.add('hidden');
     }
 
     function toggleMenu() {
         btn.classList.toggle('open');
         nav.classList.toggle('flex');
         nav.classList.toggle('hidden');
-        closeDropdowns();
     }
 
     function toggleCategoryDropdown() {
@@ -57,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
         categoryDropdown.classList.toggle('hidden');
         svg.classList.toggle('rotated');
         filterDropdown.classList.add('hidden');
+        dropdownSortCheckbox.classList.add('hidden');
     }
 
     function toggleFilterDropdown() {
@@ -64,22 +76,38 @@ document.addEventListener('DOMContentLoaded', function () {
         filterDropdown.classList.toggle('hidden');
         filterIcon.classList.toggle('rotated');
         categoryDropdown.classList.add('hidden');
+        dropdownSortCheckbox.classList.add('hidden');
+    }
+
+    function toggleSortDropdown() {
+        dropdownSortCheckbox.classList.toggle('flex');
+        dropdownSortCheckbox.classList.toggle('hidden');
+        sortIcon.classList.toggle('rotated');
+        categoryDropdown.classList.add('hidden');
+        filterDropdown.classList.add('hidden');
     }
 
     btn.addEventListener('click', () => {
         toggleMenu();
+        closeDropdowns();
     });
 
     categoryBtn.addEventListener('click', () => {
         toggleCategoryDropdown();
+        closeMenu();
     });
 
     filterBtn.addEventListener('click', () => {
         toggleFilterDropdown();
+        closeMenu();
+    });
+
+    dropdownSortButton.addEventListener('click', () => {
+        toggleSortDropdown();
+        closeMenu();
     });
 
 });
-
 
 
 
