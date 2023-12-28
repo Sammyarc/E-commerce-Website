@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const nav = document.getElementById('menu');
     const categoryDropdown = document.getElementById('cdropdown');
     const categoryBtn = document.getElementById('dropdownDefaultButton');
-    const svg = document.querySelector('svg');
+    const cSvg = document.getElementById('cSvg');
     const filterDropdown = document.getElementById('fdropdown');
     const filterBtn = document.getElementById('filterDefaultButton');
     const filterIcon = document.getElementById('filterIcon');
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
         categoryDropdown.classList.add('hidden');
         filterDropdown.classList.add('hidden');
         dropdownSortCheckbox.classList.add('hidden');
-        svg.classList.remove('rotated');
+        cSvg.classList.remove('rotated');
         filterIcon.classList.remove('rotated');
         sortIcon.classList.remove('rotated');
     }
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function toggleCategoryDropdown() {
         categoryDropdown.classList.toggle('flex');
         categoryDropdown.classList.toggle('hidden');
-        svg.classList.toggle('rotated');
+        cSvg.classList.toggle('rotated');
         filterDropdown.classList.add('hidden');
         dropdownSortCheckbox.classList.add('hidden');
         filterIcon.classList.remove('rotated');
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
         filterIcon.classList.toggle('rotated');
         categoryDropdown.classList.add('hidden');
         dropdownSortCheckbox.classList.add('hidden');
-        svg.classList.remove('rotated');
+        cSvg.classList.remove('rotated');
         sortIcon.classList.remove('rotated');
     }
 
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
         sortIcon.classList.toggle('rotated');
         categoryDropdown.classList.add('hidden');
         filterDropdown.classList.add('hidden');
-        svg.classList.remove('rotated');
+        cSvg.classList.remove('rotated');
         filterIcon.classList.remove('rotated');
     }
 
