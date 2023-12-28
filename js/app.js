@@ -55,6 +55,9 @@ document.addEventListener('DOMContentLoaded', function () {
         categoryDropdown.classList.add('hidden');
         filterDropdown.classList.add('hidden');
         dropdownSortCheckbox.classList.add('hidden');
+        svg.classList.remove('rotated');
+        filterIcon.classList.remove('rotated');
+        sortIcon.classList.remove('rotated');
     }
 
     function toggleMenu() {
@@ -69,6 +72,8 @@ document.addEventListener('DOMContentLoaded', function () {
         svg.classList.toggle('rotated');
         filterDropdown.classList.add('hidden');
         dropdownSortCheckbox.classList.add('hidden');
+        filterIcon.classList.remove('rotated');
+        sortIcon.classList.remove('rotated');
     }
 
     function toggleFilterDropdown() {
@@ -77,6 +82,8 @@ document.addEventListener('DOMContentLoaded', function () {
         filterIcon.classList.toggle('rotated');
         categoryDropdown.classList.add('hidden');
         dropdownSortCheckbox.classList.add('hidden');
+        svg.classList.remove('rotated');
+        sortIcon.classList.remove('rotated');
     }
 
     function toggleSortDropdown() {
@@ -85,6 +92,8 @@ document.addEventListener('DOMContentLoaded', function () {
         sortIcon.classList.toggle('rotated');
         categoryDropdown.classList.add('hidden');
         filterDropdown.classList.add('hidden');
+        svg.classList.remove('rotated');
+        filterIcon.classList.remove('rotated');
     }
 
     function handleDocumentClick(event) {
