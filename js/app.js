@@ -28,43 +28,58 @@ var x = setInterval(function() {
 }, 1000);
 
 
+// DROPDOWNS
 
+document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.getElementById('menu-btn');
+    const nav = document.getElementById('menu');
+    const categoryDropdown = document.getElementById('cdropdown');
+    const categoryBtn = document.getElementById('dropdownDefaultButton');
+    const svg = document.querySelector('svg');
+    const filterDropdown = document.getElementById('fdropdown');
+    const filterBtn = document.getElementById('filterDefaultButton');
+    const filterIcon = document.getElementById('filterIcon');
 
-// MENU JAVASCRIPT
-const btn = document.getElementById('menu-btn');
-const nav = document.getElementById('menu');
-
-// DROPDOWN EVENT
-
-const categoryDropdown = document.getElementById('cdropdown');
-const categoryBtn = document.getElementById('dropdownDefaultButton');
-const svg = document.querySelector('svg');
-
-function toggleMenu() {
-    btn.classList.toggle('open');
-    nav.classList.toggle('flex');
-    nav.classList.toggle('hidden');
-}
-
-function toggleDropdown() {
-    categoryDropdown.classList.toggle('flex');
-    categoryDropdown.classList.toggle('hidden');
-    svg.classList.toggle('rotated');
-}
-
-btn.addEventListener('click', () => {
-    toggleMenu();
-    if (categoryDropdown.classList.contains('flex')) {
-        toggleDropdown();
+    function closeDropdowns() {
+        categoryDropdown.classList.add('hidden');
+        filterDropdown.classList.add('hidden');
     }
-});
 
-categoryBtn.addEventListener('click', () => {
-    toggleDropdown();
-    if (nav.classList.contains('flex')) {
+    function toggleMenu() {
+        btn.classList.toggle('open');
+        nav.classList.toggle('flex');
+        nav.classList.toggle('hidden');
+        closeDropdowns();
+    }
+
+    function toggleCategoryDropdown() {
+        categoryDropdown.classList.toggle('flex');
+        categoryDropdown.classList.toggle('hidden');
+        svg.classList.toggle('rotated');
+        filterDropdown.classList.add('hidden');
+    }
+
+    function toggleFilterDropdown() {
+        filterDropdown.classList.toggle('flex');
+        filterDropdown.classList.toggle('hidden');
+        filterIcon.classList.toggle('rotated');
+        categoryDropdown.classList.add('hidden');
+    }
+
+    btn.addEventListener('click', () => {
         toggleMenu();
-    }
+    });
+
+    categoryBtn.addEventListener('click', () => {
+        toggleCategoryDropdown();
+    });
+
+    filterBtn.addEventListener('click', () => {
+        toggleFilterDropdown();
+    });
+
 });
+
 
 
 
@@ -86,3 +101,47 @@ document.addEventListener("DOMContentLoaded", function () {
         closeBtn.style.display = 'none';
     });
 });
+
+
+// LANGUAGE DROPDOWN
+
+document.addEventListener("DOMContentLoaded", function () {
+    const selectedLanguage = document.getElementById('selectedLanguage');
+    const languageList = document.getElementById('languageList');
+
+    selectedLanguage.addEventListener('click', function () {
+        languageList.style.display = (languageList.style.display === 'block') ? 'none' : 'block';
+    });
+
+    languageList.addEventListener('click', function (event) {
+        if (event.target.tagName === 'LI') {
+            selectedLanguage.textContent = event.target.textContent;
+            languageList.style.display = 'none';
+
+            // Add logic to change language based on the selected language (event.target.dataset.lang)
+            // For example, you can call a function to update content based on the selected language.
+        }
+    });
+
+    // Close the language list if the user clicks outside of it
+    document.addEventListener('click', function (event) {
+        if (!event.target.closest('.language-container')) {
+            languageList.style.display = 'none';
+        }
+    });
+});
+
+
+// PRICE BAR
+
+// Get the elements
+var rangeInput = document.getElementById('price-range-input');
+var currencyInput = document.getElementById('currency-input');
+
+// Function to update the currency input
+function updateCurrencyInput() {
+  currencyInput.value = rangeInput.value;
+}
+
+// Add event listener to the range input
+rangeInput.addEventListener('input', updateCurrencyInput);
