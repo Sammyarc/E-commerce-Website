@@ -41,7 +41,9 @@
                             <span class="font-medium text-white">+2347058667431</span>
                         </a>
                         <div class="language-container">
-                            <div class="selected-language flex place-items-center gap-2 text-xs md:text-sm" id="selectedLanguage">English</div>
+                            <div
+                                class="selected-language flex place-items-center gap-2 text-xs md:text-sm"
+                                id="selectedLanguage">English</div>
                             <ul class="language-list" id="languageList">
                                 <li data-lang="en">English</li>
                                 <li data-lang="es">Español</li>
@@ -53,7 +55,7 @@
                         <i class='bx bxs-truck text-white text-xl'></i>
                         <span class="text-white text-xs md:text-sm">1600 Amphitheatre Parkway, Mountain View, CA 94043, USA</span>
                     </div>
-    
+
                 </div>
             </section>
 
@@ -208,10 +210,9 @@
                     </div>
                 </div>
 
-
                 <!------MOBILE FILTER DROPDOWN---->
 
-                <div class="flex md:hidden mx-5 mt-3 md:px-3 lg:mx-8">
+                <div class="flex justify-between md:hidden mx-5 mt-3 md:px-3 lg:mx-8">
                     <div>
                         <button
                             id="filterDefaultButton"
@@ -232,247 +233,352 @@
                                     d="m1 1 4 4 4-4"/>
                             </svg>
                         </button>
-    
+
                         <!-- Filter menu -->
                         <div
                             id="fdropdown"
                             class="z-10 hidden absolute cdropdown bg-white divide-y divide-gray-100 rounded-lg shadow w-60 mt-3">
-                                <div class=" w-60 bg-white shadow-md rounded-md mt-3 md:p-3 lg:mx-5" aria-labelledby="filterDefaultButton">
-                                    <div class="p-4">
-                                        <p class="text-lg font-medium">Suppliers Types</p>
-                                        <div class="flex gap-3 mt-2 place-items-center">
-                                            <div class="flex items-center h-5">
-                                                <input
-                                                    id="remember"
-                                                    type="checkbox"
-                                                    value=""
-                                                    class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
-                                            </div>
-                                            <div class="flex gap-1.5 place-items-center">
-                                                <i class='bx bxs-star text-xl text-orange'></i>
-                                                <span class="text-gray-500 text-sm font-medium">Trade Assurance</span>
-                                            </div>
+                            <div
+                                class=" w-60 bg-white shadow-md rounded-md mt-3 md:p-3 lg:mx-5"
+                                aria-labelledby="filterDefaultButton">
+                                <div class="p-4">
+                                    <p class="text-lg font-medium">Suppliers Types</p>
+                                    <div class="flex gap-3 mt-2 place-items-center">
+                                        <div class="flex items-center h-5">
+                                            <input
+                                                id="remember"
+                                                type="checkbox"
+                                                value=""
+                                                class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
                                         </div>
-                                        <div class="flex gap-3 mt-2 place-items-center">
-                                            <div class="flex items-center h-5">
-                                                <input
-                                                    id="remember"
-                                                    type="checkbox"
-                                                    value=""
-                                                    class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
-                                            </div>
-                                            <div class="flex gap-1.5 place-items-center">
-                                                <i class='bx bxs-badge-check text-xl text-blue-700'></i>
-                                                <span class="text-gray-500 text-sm font-medium">Verified Suppliers</span>
-                                            </div>
+                                        <div class="flex gap-1.5 place-items-center">
+                                            <i class='bx bxs-star text-xl text-orange'></i>
+                                            <span class="text-gray-500 text-sm font-medium">Trade Assurance</span>
                                         </div>
-            
-                                        <p class="text-lg mt-3 font-medium">Product Types</p>
-                                        <div class="flex gap-3 mt-2 place-items-center">
-                                            <div class="flex items-center h-5">
-                                                <input
-                                                    id="remember"
-                                                    type="checkbox"
-                                                    value=""
-                                                    class="w-4 h-4 bg-gray-100 border-gray-600 rounded focus:ring-orange accent-orange">
-                                            </div>
-                                            <span class="text-gray-500 text-sm font-medium">Ready to Ship</span>
-                                        </div>
-                                        <div class="flex gap-3 mt-2 place-items-center">
-                                            <div class="flex items-center h-5">
-                                                <input
-                                                    id="remember"
-                                                    type="checkbox"
-                                                    value=""
-                                                    class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
-                                            </div>
-                                            <span class="text-gray-500 text-sm font-medium">Paid Samples</span>
-                                        </div>
-            
-                                        <p class="text-lg mt-3 font-medium">Condition</p>
-                                        <div class="flex gap-3 mt-2 place-items-center">
-                                            <div class="flex items-center h-5">
-                                                <input
-                                                    id="remember"
-                                                    type="checkbox"
-                                                    value=""
-                                                    class="w-4 h-4 bg-gray-100 border-gray-600 rounded focus:ring-orange accent-orange">
-                                            </div>
-                                            <span class="text-gray-500 text-sm font-medium">Brand New</span>
-                                        </div>
-                                        <div class="flex gap-3 mt-2 place-items-center">
-                                            <div class="flex items-center h-5">
-                                                <input
-                                                    id="remember"
-                                                    type="checkbox"
-                                                    value=""
-                                                    class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
-                                            </div>
-                                            <span class="text-gray-500 text-sm font-medium">Fairly Used</span>
-                                        </div>
-            
-                                        <p class="text-lg mt-3 font-medium">Min Order</p>
-            
-                                        <form class="w-full mx-auto mt-2">
-                                            <div class="flex mb-3">
-                                                <p
-                                                    class="flex-shrink-0 z-10 inline-flex items-center py-1.5 px-3 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg"
-                                                    type="button">
-                                                    USD
-                                                </p>
-                                                <div class="relative w-full">
-                                                    <input
-                                                        type="number"
-                                                        id="currency-input"
-                                                        class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 outline-none dark:placeholder-gray-400 "
-                                                        placeholder="Enter amount"
-                                                        value="100"
-                                                        required="required">
-                                                </div>
-                                            </div>
-                                            <div class="relative mb-3">
-                                                <label for="price-range-input" class="sr-only">Default range</label>
-                                                <input
-                                                    id="price-range-input"
-                                                    type="range"
-                                                    value="100"
-                                                    min="100"
-                                                    max="1500"
-                                                    class="w-full h-2 bg-orange rounded-lg appearance-none cursor-pointer">
-                                                <span
-                                                    class="text-gray-500 text-sm font-medium absolute start-0 -bottom-6">Min ($100)</span>
-                                                <span class="text-gray-500 text-sm font-medium absolute end-0 -bottom-6">Max ($1500)</span>
-                                            </div>
-                                        </form>
-            
                                     </div>
+                                    <div class="flex gap-3 mt-2 place-items-center">
+                                        <div class="flex items-center h-5">
+                                            <input
+                                                id="remember"
+                                                type="checkbox"
+                                                value=""
+                                                class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
+                                        </div>
+                                        <div class="flex gap-1.5 place-items-center">
+                                            <i class='bx bxs-badge-check text-xl text-blue-700'></i>
+                                            <span class="text-gray-500 text-sm font-medium">Verified Suppliers</span>
+                                        </div>
+                                    </div>
+
+                                    <p class="text-lg mt-3 font-medium">Product Types</p>
+                                    <div class="flex gap-3 mt-2 place-items-center">
+                                        <div class="flex items-center h-5">
+                                            <input
+                                                id="remember"
+                                                type="checkbox"
+                                                value=""
+                                                class="w-4 h-4 bg-gray-100 border-gray-600 rounded focus:ring-orange accent-orange">
+                                        </div>
+                                        <span class="text-gray-500 text-sm font-medium">Ready to Ship</span>
+                                    </div>
+                                    <div class="flex gap-3 mt-2 place-items-center">
+                                        <div class="flex items-center h-5">
+                                            <input
+                                                id="remember"
+                                                type="checkbox"
+                                                value=""
+                                                class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
+                                        </div>
+                                        <span class="text-gray-500 text-sm font-medium">Paid Samples</span>
+                                    </div>
+
+                                    <p class="text-lg mt-3 font-medium">Condition</p>
+                                    <div class="flex gap-3 mt-2 place-items-center">
+                                        <div class="flex items-center h-5">
+                                            <input
+                                                id="remember"
+                                                type="checkbox"
+                                                value=""
+                                                class="w-4 h-4 bg-gray-100 border-gray-600 rounded focus:ring-orange accent-orange">
+                                        </div>
+                                        <span class="text-gray-500 text-sm font-medium">Brand New</span>
+                                    </div>
+                                    <div class="flex gap-3 mt-2 place-items-center">
+                                        <div class="flex items-center h-5">
+                                            <input
+                                                id="remember"
+                                                type="checkbox"
+                                                value=""
+                                                class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
+                                        </div>
+                                        <span class="text-gray-500 text-sm font-medium">Fairly Used</span>
+                                    </div>
+
+                                    <p class="text-lg mt-3 font-medium">Min Order</p>
+
+                                    <form class="w-full mx-auto mt-2">
+                                        <div class="flex mb-3">
+                                            <p
+                                                class="flex-shrink-0 z-10 inline-flex items-center py-1.5 px-3 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg"
+                                                type="button">
+                                                USD
+                                            </p>
+                                            <div class="relative w-full">
+                                                <input
+                                                    type="number"
+                                                    id="currency-input"
+                                                    class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 outline-none dark:placeholder-gray-400 "
+                                                    placeholder="Enter amount"
+                                                    value="100"
+                                                    required="required">
+                                            </div>
+                                        </div>
+                                        <div class="relative mb-3">
+                                            <label for="price-range-input" class="sr-only">Default range</label>
+                                            <input
+                                                id="price-range-input"
+                                                type="range"
+                                                value="100"
+                                                min="100"
+                                                max="1500"
+                                                class="w-full h-2 bg-orange rounded-lg appearance-none cursor-pointer">
+                                            <span class="text-gray-500 text-sm font-medium absolute start-0 -bottom-6">Min ($100)</span>
+                                            <span class="text-gray-500 text-sm font-medium absolute end-0 -bottom-6">Max ($1500)</span>
+                                        </div>
+                                    </form>
+
                                 </div>
-                            </ul>
+                            </div>
+                    </ul>
                         </div>
                     </div>
+
+                  <button
+                id="dropdownSortButton"
+                data-dropdown-toggle="dropdownSortCheckbox"
+                class="text-black text-center inline-flex place-items-center relative"
+                type="button">Sort By
+                <svg
+                    id="sortIcon"
+                    class="w-2.5 h-2.5 ms-3"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewbox="0 0 10 6">
+                    <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 1 4 4 4-4"/>
+                </svg>
+                  </button>
+
+                  <!-- Dropdown menu -->
+                  <div
+                id="dropdownSortCheckbox"
+                class="z-10 absolute right-2 hidden w-48 bg-white rounded-lg shadow mt-7">
+                <ul
+                    class="p-3 space-y-3 text-sm text-black"
+                    aria-labelledby="dropdownCheckboxButton">
+                    <li>
+                        <div class="flex items-center">
+                            <input
+                                id="checkbox-item-1"
+                                type="checkbox"
+                                value=""
+                                class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
+                            <label
+                                for="checkbox-item-1"
+                                class="ms-2 text-sm font-medium">Best Seller</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <input
+                                checked="checked"
+                                id="checkbox-item-2"
+                                type="checkbox"
+                                value=""
+                                class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
+                                <label
+                                for="checkbox-item-1"
+                                class="ms-2 text-sm font-medium">Ratings</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <input
+                                id="checkbox-item-3"
+                                type="checkbox"
+                                value=""
+                                class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
+                                <label
+                                for="checkbox-item-1"
+                                class="ms-2 text-sm font-medium">Newest</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <input
+                                id="checkbox-item-3"
+                                type="checkbox"
+                                value=""
+                                class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
+                                <label
+                                for="checkbox-item-1"
+                                class="ms-2 text-sm font-medium">Highest Price</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <input
+                                id="checkbox-item-3"
+                                type="checkbox"
+                                value=""
+                                class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
+                                <label
+                                for="checkbox-item-1"
+                                class="ms-2 text-sm font-medium">Lowest Price</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <input
+                                id="checkbox-item-3"
+                                type="checkbox"
+                                value=""
+                                class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
+                                <label
+                                for="checkbox-item-1"
+                                class="ms-2 text-sm font-medium">Name</label>
+                        </div>
+                    </li>
+                </ul>
+                  </div>
                 </div>
 
-                <section class="main">
+        <section class="main">
 
-                    <!------FILTER -->
-                    <aside class="hidden md:flex w-60 bg-white shadow-md rounded-md mt-5 md:p-3 lg:mx-5">
-                        <div class="p-4">
-                            <p class="text-2xl font-medium">Filter</p>
-                            <p class="text-lg mt-3 font-medium">Suppliers Types</p>
-                            <div class="flex gap-3 mt-2 place-items-center">
-                                <div class="flex items-center h-5">
-                                    <input
-                                        id="remember"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
-                                </div>
-                                <div class="flex gap-1.5 place-items-center">
-                                    <i class='bx bxs-star text-xl text-orange'></i>
-                                    <span class="text-gray-500 text-sm font-medium">Trade Assurance</span>
-                                </div>
-                            </div>
-                            <div class="flex gap-3 mt-2 place-items-center">
-                                <div class="flex items-center h-5">
-                                    <input
-                                        id="remember"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
-                                </div>
-                                <div class="flex gap-1.5 place-items-center">
-                                    <i class='bx bxs-badge-check text-xl text-blue-700'></i>
-                                    <span class="text-gray-500 text-sm font-medium">Verified Suppliers</span>
-                                </div>
-                            </div>
-
-                            <p class="text-lg mt-3 font-medium">Product Types</p>
-                            <div class="flex gap-3 mt-2 place-items-center">
-                                <div class="flex items-center h-5">
-                                    <input
-                                        id="remember"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-4 h-4 bg-gray-100 border-gray-600 rounded focus:ring-orange accent-orange">
-                                </div>
-                                <span class="text-gray-500 text-sm font-medium">Ready to Ship</span>
-                            </div>
-                            <div class="flex gap-3 mt-2 place-items-center">
-                                <div class="flex items-center h-5">
-                                    <input
-                                        id="remember"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
-                                </div>
-                                <span class="text-gray-500 text-sm font-medium">Paid Samples</span>
-                            </div>
-
-                            <p class="text-lg mt-3 font-medium">Condition</p>
-                            <div class="flex gap-3 mt-2 place-items-center">
-                                <div class="flex items-center h-5">
-                                    <input
-                                        id="remember"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-4 h-4 bg-gray-100 border-gray-600 rounded focus:ring-orange accent-orange">
-                                </div>
-                                <span class="text-gray-500 text-sm font-medium">Brand New</span>
-                            </div>
-                            <div class="flex gap-3 mt-2 place-items-center">
-                                <div class="flex items-center h-5">
-                                    <input
-                                        id="remember"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
-                                </div>
-                                <span class="text-gray-500 text-sm font-medium">Fairly Used</span>
-                            </div>
-
-                            <p class="text-lg mt-3 font-medium">Min Order</p>
-
-                            <form class="w-full mx-auto mt-2">
-                                <div class="flex mb-3">
-                                    <p
-                                        class="flex-shrink-0 z-10 inline-flex items-center py-1.5 px-3 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg"
-                                        type="button">
-                                        USD
-                                    </p>
-                                    <div class="relative w-full">
-                                        <input
-                                            type="number"
-                                            id="currency-input"
-                                            class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 outline-none dark:placeholder-gray-400 "
-                                            placeholder="Enter amount"
-                                            value="100"
-                                            required="required">
-                                    </div>
-                                </div>
-                                <div class="relative mb-3">
-                                    <label for="price-range-input" class="sr-only">Default range</label>
-                                    <input
-                                        id="price-range-input"
-                                        type="range"
-                                        value="100"
-                                        min="100"
-                                        max="1500"
-                                        class="w-full h-2 bg-orange rounded-lg appearance-none cursor-pointer">
-                                    <span
-                                        class="text-gray-500 text-sm font-medium absolute start-0 -bottom-6">Min ($100)</span>
-                                    <span class="text-gray-500 text-sm font-medium absolute end-0 -bottom-6">Max ($1500)</span>
-                                </div>
-                            </form>
-
+            <!------FILTER -->
+            <aside
+                class="hidden md:flex w-60 bg-white shadow-md rounded-md mt-5 md:p-3 lg:mx-5">
+                <div class="p-4">
+                    <p class="text-2xl font-medium">Filter</p>
+                    <p class="text-lg mt-3 font-medium">Suppliers Types</p>
+                    <div class="flex gap-3 mt-2 place-items-center">
+                        <div class="flex items-center h-5">
+                            <input
+                                id="remember"
+                                type="checkbox"
+                                value=""
+                                class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
                         </div>
-                    </aside>
+                        <div class="flex gap-1.5 place-items-center">
+                            <i class='bx bxs-star text-xl text-orange'></i>
+                            <span class="text-gray-500 text-sm font-medium">Trade Assurance</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-3 mt-2 place-items-center">
+                        <div class="flex items-center h-5">
+                            <input
+                                id="remember"
+                                type="checkbox"
+                                value=""
+                                class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
+                        </div>
+                        <div class="flex gap-1.5 place-items-center">
+                            <i class='bx bxs-badge-check text-xl text-blue-700'></i>
+                            <span class="text-gray-500 text-sm font-medium">Verified Suppliers</span>
+                        </div>
+                    </div>
 
-                </section>
+                    <p class="text-lg mt-3 font-medium">Product Types</p>
+                    <div class="flex gap-3 mt-2 place-items-center">
+                        <div class="flex items-center h-5">
+                            <input
+                                id="remember"
+                                type="checkbox"
+                                value=""
+                                class="w-4 h-4 bg-gray-100 border-gray-600 rounded focus:ring-orange accent-orange">
+                        </div>
+                        <span class="text-gray-500 text-sm font-medium">Ready to Ship</span>
+                    </div>
+                    <div class="flex gap-3 mt-2 place-items-center">
+                        <div class="flex items-center h-5">
+                            <input
+                                id="remember"
+                                type="checkbox"
+                                value=""
+                                class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
+                        </div>
+                        <span class="text-gray-500 text-sm font-medium">Paid Samples</span>
+                    </div>
 
-            </section>
+                    <p class="text-lg mt-3 font-medium">Condition</p>
+                    <div class="flex gap-3 mt-2 place-items-center">
+                        <div class="flex items-center h-5">
+                            <input
+                                id="remember"
+                                type="checkbox"
+                                value=""
+                                class="w-4 h-4 bg-gray-100 border-gray-600 rounded focus:ring-orange accent-orange">
+                        </div>
+                        <span class="text-gray-500 text-sm font-medium">Brand New</span>
+                    </div>
+                    <div class="flex gap-3 mt-2 place-items-center">
+                        <div class="flex items-center h-5">
+                            <input
+                                id="remember"
+                                type="checkbox"
+                                value=""
+                                class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
+                        </div>
+                        <span class="text-gray-500 text-sm font-medium">Fairly Used</span>
+                    </div>
 
-            <!--------JS LINKS------>
-            <script type="text/javascript" src="js/pre-loading.js"></script>
-            <script type="text/javascript" src="js/app.js"></script>
-        </body>
-    </html>
+                    <p class="text-lg mt-3 font-medium">Min Order</p>
+
+                    <form class="w-full mx-auto mt-2">
+                        <div class="flex mb-3">
+                            <p
+                                class="flex-shrink-0 z-10 inline-flex items-center py-1.5 px-3 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg"
+                                type="button">
+                                USD
+                            </p>
+                            <div class="relative w-full">
+                                <input
+                                    type="number"
+                                    id="currency-input"
+                                    class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 outline-none dark:placeholder-gray-400 "
+                                    placeholder="Enter amount"
+                                    value="100"
+                                    required="required">
+                            </div>
+                        </div>
+                        <div class="relative mb-3">
+                            <label for="price-range-input" class="sr-only">Default range</label>
+                            <input
+                                id="price-range-input"
+                                type="range"
+                                value="100"
+                                min="100"
+                                max="1500"
+                                class="w-full h-2 bg-orange rounded-lg appearance-none cursor-pointer">
+                            <span class="text-gray-500 text-sm font-medium absolute start-0 -bottom-6">Min ($100)</span>
+                            <span class="text-gray-500 text-sm font-medium absolute end-0 -bottom-6">Max ($1500)</span>
+                        </div>
+                    </form>
+
+                </div>
+            </aside>
+
+        </section>
+
+    </section>
+
+    <!--------JS LINKS------>
+    <script type="text/javascript" src="js/pre-loading.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
