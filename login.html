@@ -29,6 +29,34 @@
         </figure>
         <!-------MAIN CONTENT---->
         <section class="content">
+
+
+            <!-----TOP BAR----->
+           <section class="bg-gray-900 p-3 md:px-8">
+            <div class="block md:flex justify-between place-items-center">
+                <div class="flex gap-5">
+                    <a
+                        href="tel:+2347058667431"
+                        class="flex place-items-center space-x-2 text-xs md:text-sm js-show-on-scroll">
+                        <span class="font-medium text-white">+2347058667431</span>
+                    </a>
+                    <div class="language-container">
+                        <div class="selected-language flex place-items-center gap-2 text-xs md:text-sm" id="selectedLanguage">English</div>
+                        <ul class="language-list" id="languageList">
+                            <li data-lang="en">English</li>
+                            <li data-lang="es">Español</li>
+                            <li data-lang="fr">Français</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex gap-2 place-items-center mt-3 md:mt-0">
+                    <i class='bx bxs-truck text-white text-xl'></i>
+                    <span class="text-white text-xs md:text-sm">1600 Amphitheatre Parkway, Mountain View, CA 94043, USA</span>
+                </div>
+
+            </div>
+        </section>
+
             <!-----NAVIGATION----->
             <div
                 class="flex justify-between place-items-center p-1 mt-2 mx-5 gap-4 md:p-3 lg:mx-5">
@@ -38,27 +66,35 @@
                         class='bx bx-cart text-white p-1 lg:p-2 border-orange border bg-orange rounded-full text-2xl'></i>
                     <span class="text-2xl font-bold hidden md:block">SwiftCart</span>
                 </div>
-                <!----SEARCH COMPONENT---->
-                <div class="search-container rounded-full place-items-center">
-                    <input
-                        type="text"
-                        id="search-input"
-                        placeholder="Search for products"
-                        class="search-input rounded-full">
-                    <i
-                        class='bx bx-search search-icon md:text-xl bg-orange rounded-r-full text-white cursor-pointer md:px-1.5 lg:py-2.5 lg:px-3.5 '></i>
-                </div>
+
                 <!-----ICONS-->
                 <div class="flex justify-between gap-2 mt-1">
                     <div class="flex gap-1 place-items-center md:gap-2 lg:gap-4 xl:gap-7">
+                        <!------SEARCH CONTAINER--->
+                        <div class="search-container">
+                            <i class='bx bx-search text-2xl md:text-3xl' id="searchBtn"></i>
+                            <div class="search-box">
+                                <div class="flex gap-1 place-items-center">
+                                    <input
+                                        type="text"
+                                        id="searchInput"
+                                        placeholder="Search for products..."
+                                        class="w-32 md:w-48">
+                                    <i class='bx bx-search text-2xl md:text-3xl cursor-pointer'></i>
+                                </div>
+                                <i class='bx bx-x text-3xl' id="closeBtn"></i>
+                            </div>
+                        </div>
                         <div class="notification-container">
-                            <i class='bx bx-bell text-2xl lg:text-3xl'></i>
+                            <i class='bx bx-bell text-2xl md:text-3xl'></i>
                             <span class="notification-count"></span>
                         </div>
                         <div class="cart-container">
-                            <i class='bx bx-cart text-2xl lg:text-3xl'></i>
+                            <i class='bx bx-cart text-2xl md:text-3xl'></i>
                             <span class="cart-count"></span>
                         </div>
+
+
                         <!-------BUTTONS----->
                         <div class="flex justify-between place-items-center gap-2">
                             <a
@@ -138,7 +174,7 @@
                             <a href="index.html" class="hover:text-orange">Home</a>
                         </li>
                         <li>
-                            <a href="#" class="hover:text-orange transition duration-500 ease-in-out">Products</a>
+                            <a href="product.html" class="hover:text-orange transition duration-500 ease-in-out">Products</a>
                         </li>
                         <li>
                             <a href="#" class="hover:text-orange transition duration-500 ease-in-out">About</a>
@@ -159,7 +195,7 @@
                             id="menu"
                             class="absolute hidden flex-col px-8 py-8 mt-8 space-y-6 font-bold rounded-lg left-10 md:left-60 right-2 drop-shadow-md">
                             <a href="index.html" class="hover:text-orange">Home</a>
-                            <a href="#" class="hover:text-orange transition duration-500 ease-in-out">Products</a>
+                            <a href="product.html" class="hover:text-orange transition duration-500 ease-in-out">Products</a>
                             <a href="#" class="hover:text-orange transition duration-500 ease-in-out">About</a>
                             <a href="#" class="hover:text-orange transition duration-500 ease-in-out">Shop</a>
                             <a
@@ -174,7 +210,7 @@
 
 
             <!-----DETAILS-->
-            <div class="flex flex-col md:flex-row justify-center lg:gap-24">
+            <div class="flex flex-col md:flex-row justify-center lg:gap-x-52">
                 <!-----LEFT ITEM-->
                 <div class="max-w-2xl mt-16 md:mt-40">
                     <img src="assets/images/login.avif" alt="login-img">
@@ -182,7 +218,7 @@
                 <!----------FORM INPUTS----->
 
                 <section
-                    class="mx-6 md:w-96 rounded-lg p-5 md:mt-32 mb-6 relative">
+                    class="mx-6 md:w-96 rounded-lg md:mt-32 mb-6 relative">
                     <h1 class="text-center text-4xl font-bold mb-6">
                         Log In
                     </h1>
