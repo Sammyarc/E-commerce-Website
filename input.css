@@ -252,3 +252,21 @@ figure {
     border-radius: 5px;
     display: none;
 }
+
+
+input{
+  padding-left: 25px;
+  padding-right: 25px;
+}
+::placeholder{
+  color: darkgrey;
+}
+.error{
+  display: none;
+}
+.invalid .error {
+  display: flex;
+}
+.invalid input{
+  border-color: red;
+}
