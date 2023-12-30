@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const cPassField = signupForm.querySelector('.confirm-password');
     const cPassInput = cPassField.querySelector('.cPassword');
 
-
     // EMAIL VALIDATION
     function checkEmail() {
         const emailpattern = /^[^]+@[^]+\.[a-z]{2,3}$/;
@@ -80,29 +79,41 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add an event listener to the registration form
     signupForm.addEventListener("submit", function (event) {
         event.preventDefault();
-    
+
         checkEmail();
         createPass();
         confirmPass();
-    
+
         emailInput.addEventListener('keyup', checkEmail);
         passInput.addEventListener('keyup', createPass);
         cPassInput.addEventListener('keyup', confirmPass);
-    
+
         if (!emailField.classList.contains('invalid') && !passField.classList.contains('invalid') && !cPassField.classList.contains('invalid')) {
-    
+
             const users = JSON.parse(localStorage.getItem("users")) || [];
             const isUsernameTaken = users.some(u => u.username === userInput.value);
-    
+
             if (isUsernameTaken) {
                 userField.classList.add("invalid");
             } else {
                 userField.classList.remove("invalid");
                 users.push({ username: userInput.value, email: emailInput.value, password: passInput.value });
                 localStorage.setItem('users', JSON.stringify(users));
-                window.location.href = 'login.html'; // Redirect to login.html on successful validation
+
+                // Additional code for the button click
+                let btn = document.querySelector('.button');
+                spinIcon = document.querySelector('.spinner');
+                btnText = document.querySelector(".btn-text");
+
+                btn.classList.add('checked');
+                spinIcon.classList.add('spin');
+                btnText.textContent = "Registering...";
+
+                // Redirect after 2 seconds
+                setTimeout(() => {
+                    window.location.href = 'login.html';
+                }, 5000);
             }
         }
     });
-    
 });
