@@ -269,41 +269,34 @@
                         Log In
                     </h1>
                     <form id="LogInForm">
-                        <div class="mt-5 email-field">
+                        <div class="user">
                             <label
-                                for="email"
-                                class="flex justify-start mb-2 text-sm font-semibold text-gray-900">Username
-                            </label>
-                            <div class="input-field">
-                                <input
-                                    type="text"
-                                    id="username"
-                                    class="border-gray-600 border-b outline-none text-gray-900 text-sm block w-full p-2.5 placeholder-gray-400 email bg-none"
-                                    placeholder="Enter your username">
-                                    <i class='bx bx-user absolute right-6 -translate-y-7 text-lg text-gray-700' ></i>
-                            </div>
-                            <span class="hidden error gap-2 place-items-center text-red-600 mt-2 text-sm">
-                                <i class='bx bx-error-circle text-lg'></i>
-                                <p>User does not exist!</p>
-                            </span>
-                        </div>
-                        <div class="mt-5 confirm-password">
-                            <label
-                                for="confirm_password"
-                                class="flex justify-start mb-2 text-sm font-semibold text-gray-900">
-                                Password</label>
+                                for="first_name"
+                                class="flex justify-start mb-2 text-sm font-medium text-gray-900">Username</label>
                             <input
+                                type="text"
+                                id="Username"
+                                class="border-gray-600 border-b outline-none text-gray-900 text-sm block w-full p-2.5 placeholder-gray-400 username"
+                                placeholder="Username"
+                                required="required">
+                                <i class='bx bx-user absolute right-2 -translate-y-7 text-lg text-gray-700' ></i>
+                        </div>
+                        <div class="mt-5 user-password">
+                            <label
+                                id="user-password"
+                                for="password"
+                                class="flex justify-start mb-2 text-sm font-medium text-gray-900">Password</label>
+                            <input 
                                 type="password"
-                                id="confirm_password"
-                                class="border-gray-600 border-b outline-none text-gray-900 text-sm block w-full p-2.5 placeholder-gray-400 cPassword bg-transparent"
-                                placeholder="Enter Password">
-                            <i
-                                class='bx bxs-hide absolute right-6 -translate-y-7 text-lg text-gray-700'
-                                id="showConfirmPassword"></i>
-                            <span class="hidden error place-items-center text-red-600 mt-2 text-sm">
-                                <i class='bx bx-error-circle text-lg'></i>
-                                <p>Password is incorrect</p>
-                            </span>
+                                id="password"
+                                class="border-gray-600 border-b outline-none text-gray-900 text-sm block w-full p-2.5 placeholder-gray-400 password"
+                                placeholder="Enter Your Password"
+                                >
+                                <i class='bx bxs-hide absolute right-2 -translate-y-7 text-lg text-gray-700' id="showPassword"></i>
+                                <span class="hidden error place-items-center text-red mt-1 gap-1 text-sm">
+                                    <i class='bx bx-error-circle text-lg'></i>
+                                    <p>Invalid username or password.</p>
+                                </span>
                         </div>
                         <div class="flex items-start mt-5">
                             <div class="flex items-start">
@@ -427,5 +420,6 @@
         <script type="text/javascript" src="js/pre-loading.js"></script>
         <script type="text/javascript" src="js/dropdown.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
     </body>
 </html>
