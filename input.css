@@ -253,6 +253,8 @@ figure {
     display: none;
 }
 
+/* LOGIN AND REGISTER STYLES */
+
 
 input{
   padding-left: 25px;
@@ -269,4 +271,22 @@ input{
 }
 .invalid input{
   border-color: red;
+}
+  
+button .spinner{
+  display: none;
+}
+
+button .spinner.spin{
+  animation: spin 1.3s ease-in-out infinite;
+} 
+
+@keyframes  spin {
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+button.checked  .spinner{
+  display: flex;
 }
