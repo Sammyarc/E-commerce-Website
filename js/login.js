@@ -28,7 +28,18 @@ document.addEventListener("DOMContentLoaded", function () {
         const user = users.find(u => u.username === userInput.value && u.password === passInput.value);
 
         if (user) {
-            window.location.href = 'index.html';
+            let btn = document.querySelector('.lbutton');
+                spinIcon = document.querySelector('.spinner');
+                btnText = document.querySelector(".btn-text");
+
+                btn.classList.add('checked');
+                spinIcon.classList.add('spin');
+                btnText.textContent = "Authenticating...";
+
+                // Redirect after 3 seconds
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 5000);
         } else {
             passField.classList.add("invalid");
         }
