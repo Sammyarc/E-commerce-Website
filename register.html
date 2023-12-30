@@ -267,33 +267,35 @@
                         Sign Up
                     </h1>
                     <form id="registrationForm">
-                        <div>
+                        <div class="newuser">
                             <label
-                                for="first_name"
+                                for="Username"
                                 class="flex justify-start mb-2 text-sm font-medium text-gray-900">Username</label>
                             <input
                                 type="text"
-                                id="first_name"
-                                class="border-gray-600 border-b outline-none text-gray-900 text-sm block w-full p-2.5 placeholder-gray-400"
+                                id="Username"
+                                class="border-gray-600 border-b outline-none text-gray-900 text-sm block w-full p-2.5 placeholder-gray-400 username"
                                 placeholder="Username"
                                 required="required">
-                                <i class='bx bx-user absolute right-6 -translate-y-7 text-lg text-gray-700' ></i>
+                                <i class='bx bx-user absolute right-2 -translate-y-7 text-lg text-gray-700' ></i>
+                                <span class="hidden error place-items-center text-red mt-1 gap-1 text-sm">
+                                    <i class='bx bx-error-circle text-lg'></i>
+                                    <p>User already exists!</p>
+                                </span>
                         </div>
                         <div class="mt-5 email-field">
                             <label
                                 for="email"
                                 class="flex justify-start mb-2 text-sm font-medium text-gray-900">Email address
                             </label>
-                            <div class="input-field">
                                 <input
                                 type="email"
                                 id="email"
                                 class="border-gray-600 border-b outline-none text-gray-900 text-sm block w-full p-2.5 placeholder-gray-400 email"
                                 placeholder="Enter your email address"
                                 >
-                                <i class='bx bxs-envelope absolute right-6 -translate-y-7 text-lg text-gray-700' ></i>
-                            </div>
-                                <span class="hidden error place-items-center text-red-600 mt-2 text-sm">
+                                <i class='bx bxs-envelope absolute right-2 -translate-y-7 text-lg text-gray-700' ></i>
+                                <span class="hidden error place-items-center text-red mt-1 gap-1 text-sm">
                                     <i class='bx bx-error-circle text-lg'></i>
                                     <p>Please enter a valid email address</p>
                                 </span>
@@ -308,8 +310,8 @@
                                 class="border-gray-600 border-b outline-none text-gray-900 text-sm block w-full p-2.5 placeholder-gray-400 password"
                                 placeholder="Create Password"
                                 >
-                                <i class='bx bxs-hide absolute right-6 -translate-y-7 text-lg text-gray-700' id="showPassword"></i>
-                                <span class="hidden error justify-start text-red-600 mt-2 text-sm">
+                                <i class='bx bxs-hide absolute right-2 -translate-y-7 text-lg text-gray-700' id="showPassword"></i>
+                                <span class="hidden error justify-start text-red mt-1 gap-1 text-sm">
                                     <i class='bx bx-error-circle text-lg'></i>
                                     <p>Password must be 8 characters long and include at least one uppercase letter, one lowercase letter, and one number.</p>
                                 </span>
@@ -324,8 +326,8 @@
                                 class="border-gray-600 border-b outline-none text-gray-900 text-sm block w-full p-2.5 placeholder-gray-400 cPassword "
                                 placeholder="Confirm Password"
                                 >
-                                <i class='bx bxs-hide absolute right-6 -translate-y-7 text-lg text-gray-700' id="showConfirmPassword"></i>
-                                <span class="hidden error place-items-center text-red-600 mt-2 text-sm">
+                                <i class='bx bxs-hide absolute right-2 -translate-y-7 text-lg text-gray-700' id="showConfirmPassword"></i>
+                                <span class="hidden error place-items-center text-red mt-1 gap-1 text-sm">
                                     <i class='bx bx-error-circle text-lg'></i>
                                     <p>Password don't match</p>
                                 </span>
@@ -345,7 +347,7 @@
                             type="submit"
                             value="register"
                             id="registerButton"
-                            class="w-full mt-5 text-white bg-blue transition duration-500 ease-in-out hover:bg-white font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-orange dark:hover:bg-orange dark:focus:ring-orange">Create a new account</button>
+                            class="w-full mt-5 text-white bg-blue transition duration-500 ease-in-out hover:bg-white font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-orange dark:hover:bg-orange dark:focus:ring-orange" disabled>Create a new account</button>
                     </form>
                 </section>
             </div>
@@ -444,5 +446,6 @@
         <script type="text/javascript" src="js/pre-loading.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
         <script type="text/javascript" src="js/dropdown.js"></script>
+        <script type="text/javascript" src="js/register.js"></script>
     </body>
 </html>
