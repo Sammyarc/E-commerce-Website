@@ -126,6 +126,18 @@
                                 <div
                                     class="absolute block w-3 h-3 bg-red border-2  rounded-full -top-0.5 start-2.5"></div>
                             </button>
+
+                            
+                             <!-- Dropdown menu -->
+                             <div
+                             id="dropdownNotification"
+                             class="hidden z-10 mt-2 w-48 right-10 bg-white divide-y divide-gray-100 rounded-lg shadow absolute lg:right-auto"
+                             aria-labelledby="dropdownNotificationButton">
+                             <div
+                                 class="block px-4 py-2 font-medium text-center text-gray-700 rounded-t-lg bg-gray-50  ">
+                                 No new messages
+                             </div>
+                         </div>
                         </div>
 
                         <div
@@ -161,22 +173,8 @@
                 <div>
                     <button
                         id="dropdownDefaultButton"
-                        class="text-black text-center inline-flex items-center relative"
-                        type="button">Categories
-                        <svg
-                            id="cSvg"
-                            class="w-2.5 h-2.5 ms-3"
-                            aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewbox="0 0 10 6">
-                            <path
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="m1 1 4 4 4-4"/>
-                        </svg>
+                        class="text-black text-center inline-flex place-items-center relative"
+                        type="button"><i class='bx bx-list-ul text-2xl'></i><span>Categories</span>
                     </button>
 
                     <!-- Dropdown menu -->
@@ -287,7 +285,7 @@
                             id="fdropdown"
                             class="z-10 hidden absolute cdropdown bg-white divide-y divide-gray-100 rounded-lg shadow w-60 mt-3">
                             <div
-                                class=" w-60 bg-white shadow-md rounded-md mt-3 md:p-3 lg:mx-5"
+                                class=" w-60 bg-white shadow-md rounded-md  md:p-3 lg:mx-5"
                                 aria-labelledby="filterDefaultButton">
                                 <div class="p-4">
                                     <p class="text-lg font-medium">Suppliers Types</p>
@@ -365,7 +363,7 @@
                                     <p class="text-lg mt-3 font-medium">Min Order</p>
 
                                     <form class="w-full mx-auto mt-2">
-                                        <div class="flex mb-3">
+                                        <div class="flex">
                                             <p
                                                 class="flex-shrink-0 z-10 inline-flex items-center py-1.5 px-3 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg"
                                                 type="button">
@@ -381,7 +379,7 @@
                                                     required="required">
                                             </div>
                                         </div>
-                                        <div class="relative mb-3">
+                                        <div class="relative mb-5">
                                             <label for="price-range-input" class="sr-only">Default range</label>
                                             <input
                                                 id="price-range-input"
@@ -400,6 +398,10 @@
                     </ul>
                         </div>
                     </div>
+
+
+                    <!----SORT DROPDOWN---->
+
 
                   <button
                 id="dropdownSortButton"
@@ -604,7 +606,7 @@
                                     required="required">
                             </div>
                         </div>
-                        <div class="relative mb-3">
+                        <div class="relative">
                             <label for="price-range-input" class="sr-only">Default range</label>
                             <input
                                 id="price-range-input"
@@ -628,5 +630,6 @@
     <!--------JS LINKS------>
     <script type="text/javascript" src="js/pre-loading.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/dropdown.js"></script>
 </body>
 </html>
