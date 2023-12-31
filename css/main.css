@@ -604,6 +604,18 @@ video {
   inset-inline-start: 0.625rem;
 }
 
+.right-10 {
+  right: 2.5rem;
+}
+
+.right-auto {
+  right: auto;
+}
+
+.left-32 {
+  left: 8rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -730,6 +742,14 @@ video {
   margin-top: 2.25rem;
 }
 
+.mt-12 {
+  margin-top: 3rem;
+}
+
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
 .block {
   display: block;
 }
@@ -848,6 +868,14 @@ video {
 
 .w-px {
   width: 1px;
+}
+
+.w-80 {
+  width: 20rem;
+}
+
+.w-36 {
+  width: 9rem;
 }
 
 .max-w-2xl {
@@ -1023,6 +1051,11 @@ video {
 .rounded-t-xl {
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
+}
+
+.rounded-t-lg {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 
 .border {
@@ -1705,45 +1738,7 @@ figure {
   margin-top: 30px;
 }
 
-.price-progress-meter {
-  width: 100%;
-  height: 6px;
-  position: relative;
-  background-color: #e3e3e3;
-  border-radius: 6px;
-}
-
-.price-progress-meter .bar {
-  width: 10px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: orange;
-  border-radius: 6px;
-  transition: width 0.3s linear;
-  cursor: pointer;
-}
-
-.tooltip {
-  position: absolute;
-  top: -30px;
-  /* Adjust distance from the bar as needed */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: orange;
-  color: #fff;
-  padding: 5px;
-  border-radius: 5px;
-  display: none;
-}
-
 /* LOGIN AND REGISTER STYLES */
-
-input{
-  padding-left: 25px;
-  padding-right: 25px;
-}
 
 ::-moz-placeholder{
   color: darkgrey;
@@ -1832,6 +1827,11 @@ button.checked  .spinner{
 }
 
 @media (prefers-color-scheme: dark) {
+  .dark\:divide-gray-700 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(55 65 81 / var(--tw-divide-opacity));
+  }
+
   .dark\:border-gray-600 {
     --tw-border-opacity: 1;
     border-color: rgb(75 85 99 / var(--tw-border-opacity));
@@ -1855,6 +1855,11 @@ button.checked  .spinner{
   .dark\:bg-orange {
     --tw-bg-opacity: 1;
     background-color: rgb(251 139 36 / var(--tw-bg-opacity));
+  }
+
+  .dark\:bg-gray-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
   }
 
   .dark\:text-black {
@@ -2055,6 +2060,14 @@ button.checked  .spinner{
 }
 
 @media (min-width: 976px) {
+  .lg\:right-auto {
+    right: auto;
+  }
+
+  .lg\:right-0 {
+    right: 0px;
+  }
+
   .lg\:mx-10 {
     margin-left: 2.5rem;
     margin-right: 2.5rem;
