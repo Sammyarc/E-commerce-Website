@@ -258,3 +258,10 @@ button .spinner.spin{
 button.checked  .spinner{
   display: flex;
 }
+
+
+/*  GOOGLE MAPS */
+
+iframe{
+  width: 100%;
+}
