@@ -9,7 +9,7 @@ module.exports = {
       xl: '1280px',
     },
     fontFamily: {
-      'Inter': ['Inter'],
+      'Montserrat': ['Montserrat'],
     }, 
     extend: {
       colors: {
