@@ -265,3 +265,16 @@ button.checked  .spinner{
 iframe{
   width: 100%;
 }
+
+
+/** COOKIE */
+
+.cookieBox{
+  right: -370px;
+  max-width: 345px;
+  width: 100%;
+  transition: right 0.3s ease-in-out;
+}
+.showcookie{
+  right: 0px;
+}
