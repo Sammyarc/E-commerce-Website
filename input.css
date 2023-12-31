@@ -222,44 +222,12 @@ figure {
   }
 
 
-  .price-progress-meter {
-    width: 100%;
-    height: 6px;
-    position: relative;
-    background-color: #e3e3e3;
-    border-radius: 6px;
-  }
-  
-  .price-progress-meter .bar {
-    width: 10px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: orange;
-    border-radius: 6px;
-    transition: width 0.3s linear;
-    cursor: pointer;
-  }
-  .tooltip {
-    position: absolute;
-    top: -30px; /* Adjust distance from the bar as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: orange;
-    color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    display: none;
-}
+
 
 /* LOGIN AND REGISTER STYLES */
 
 
-input{
-  padding-left: 25px;
-  padding-right: 25px;
-}
+
 ::placeholder{
   color: darkgrey;
 }
