@@ -123,6 +123,18 @@
                             <div
                                 class="absolute block w-3 h-3 bg-red border-2  rounded-full -top-0.5 start-2.5"></div>
                         </button>
+
+                        
+                             <!-- Dropdown menu -->
+                             <div
+                             id="dropdownNotification"
+                             class="hidden z-10 mt-2 w-48 right-10 bg-white divide-y divide-gray-100 rounded-lg shadow absolute lg:right-auto"
+                             aria-labelledby="dropdownNotificationButton">
+                             <div
+                                 class="block px-4 py-2 font-medium text-center text-gray-700 rounded-t-lg bg-gray-50  ">
+                                 No new messages
+                             </div>
+                         </div>
                     </div>
 
                     <div
@@ -155,25 +167,11 @@
        <!-------MINI NAV----->
        <div class="flex mx-5 md:px-3 lg:mx-8">
            <div>
-               <button
-                   id="dropdownDefaultButton"
-                   class="text-black text-center inline-flex items-center relative"
-                   type="button">Categories
-                   <svg
-                       id="cSvg"
-                       class="w-2.5 h-2.5 ms-3"
-                       aria-hidden="true"
-                       xmlns="http://www.w3.org/2000/svg"
-                       fill="none"
-                       viewbox="0 0 10 6">
-                       <path
-                           stroke="currentColor"
-                           stroke-linecap="round"
-                           stroke-linejoin="round"
-                           stroke-width="2"
-                           d="m1 1 4 4 4-4"/>
-                   </svg>
-               </button>
+            <button
+            id="dropdownDefaultButton"
+            class="text-black text-center inline-flex place-items-center relative"
+            type="button"><i class='bx bx-list-ul text-2xl'></i><span>Categories</span>
+        </button>
 
                <!-- Dropdown menu -->
                <div
@@ -347,7 +345,7 @@
                             type="submit"
                             value="register"
                             id="registerButton"
-                            class="w-full mt-5 flex justify-center gap-1 text-white bg-blue transition duration-500 ease-in-out hover:bg-white font-medium rounded-lg px-5 py-2.5 dark:bg-orange dark:hover:bg-orange dark:focus:ring-orange button" disabled><i class='bx bx-loader-alt text-2xl spinner' ></i><span class="text-sm btn-text">Create a new account</span></button>
+                            class="w-full mt-5 flex justify-center place-items-center gap-1 text-white bg-blue transition duration-500 ease-in-out hover:bg-white font-medium rounded-lg px-5 py-2.5 dark:bg-orange dark:hover:bg-orange dark:focus:ring-orange button" disabled><i class='bx bx-loader-alt text-2xl spinner' ></i><span class="text-sm btn-text">Create a new account</span></button>
                     </form>
                 </section>
             </div>
@@ -363,7 +361,7 @@
                 </div>
                 <p class="text-white px-3 pt-4">
                     Embrace a seamless online shopping experience that redefines convenience and
-                    satisfaction.Shop confidently with secure transactions, swift deliveries, and
+                    satisfaction. Shop confidently with secure transactions, swift deliveries, and
                     dedicated customer support.
                 </p>
                 <form id="subscription-form">
