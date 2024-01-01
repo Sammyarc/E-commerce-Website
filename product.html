@@ -56,7 +56,7 @@
 
             <!-----NAVIGATION----->
             <div
-                class="flex justify-between place-items-center p-1 mt-2 mx-3 gap-4 md:p-3 lg:mx-5">
+                class="flex justify-between place-items-center mx-3 mt-2 lg:mx-5">
                 <!-----LOGO---->
                 <div class="flex gap-3 place-items-center">
                     <i
@@ -65,7 +65,7 @@
                 </div>
 
                 <!-----ICONS-->
-                <div class="flex justify-between place-items-center gap-3 lg:gap-4 xl:gap-7 mt-1">
+                <div class="flex justify-between place-items-center gap-2 lg:gap-3 mt-1">
 
                     <!------SEARCH CONTAINER--->
                     <div class="hidden md:flex place-items-center search-container">
@@ -109,10 +109,10 @@
                         <!-- Dropdown menu -->
                         <div
                             id="dropdownNotification"
-                            class="hidden z-10 mt-2 w-48 right-10 bg-white divide-y divide-gray-100 rounded-lg shadow absolute lg:right-auto"
+                            class="hidden z-10 mt-2 w-48 right-10 bg-white divide-y divide-gray-100 rounded-lg shadow absolute"
                             aria-labelledby="dropdownNotificationButton">
                             <div
-                                class="block px-4 py-2 font-medium text-center text-gray-700 rounded-t-lg bg-gray-50  ">
+                                class="block px-4 py-2 font-medium text-center text-gray-700 rounded-t-lg bg-gray-50">
                                 No new messages
                             </div>
                         </div>
@@ -141,30 +141,21 @@
 
                     <div class="user-container">
                         <div
-                            class="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full cursor-pointer"
+                            class="relative mt-1.5 cursor-pointer"
                             id="avatarButton"
                             type="button"
                             data-dropdown-toggle="userDropdown">
-                            <svg
-                                class="absolute w-12 h-12 text-gray-400 -left-1"
-                                fill="currentColor"
-                                viewbox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    fill-rule="evenodd"
-                                    d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
+                            <i class='bx bx-user text-3xl'></i>
                         </div>
 
                         <!-- Dropdown menu -->
                         <div
                             id="userDropdown"
-                            class="z-10 hidden bg-white absolute rounded-lg mt-2 right-10 lg:right-auto">
+                            class="z-10 hidden bg-white absolute rounded-lg mt-2 right-10">
                             <ul class="py-2 text-sm" aria-labelledby="avatarButton">
                                 <li class="px-4 py-3 text-sm">
-                                    <p id="username">Bonnie Green</p>
-                                    <p class="font-medium" id="useremail">name@flowbite.com</p>
+                                    <p id="name"></p>
+                                    <p class="font-medium" id="useremail"></p>
                                 </li>
                                 <li class="px-4 py-2">
                                     <a href="#" class="flex place-items-center gap-2">
@@ -203,7 +194,7 @@
                                         <span class="hover:font-medium">Orders</span></a>
                                 </li>
                                 <li class="px-4 py-2">
-                                    <a href="#" class="flex place-items-center gap-2">
+                                    <a href="#" class="flex place-items-center gap-2" id="signOutButton">
                                         <i class='bx bx-log-out text-lg'></i>
                                         <span class="hover:font-medium">Sign Out</span></a>
                                 </li>
@@ -212,7 +203,7 @@
                     </div>
 
                     <!-------BUTTONS----->
-                    <div class="flex justify-between place-items-center gap-2">
+                    <div class="flex justify-between place-items-center gap-2 ctabuttons">
                         <a
                             href="login.html"
                             class="hidden border bg-orange text-white rounded-xl hover:bg-amber-500 transition duration-500 ease-in-out lg:flex lg:px-1 lg:py-2 xl:px-4 xl:py-2">Log In</a>
@@ -306,10 +297,10 @@
                             <a href="#" class="hover:text-orange transition duration-500 ease-in-out">Shop</a>
                             <a
                                 href="login.html"
-                                class="hover:text-orange transition duration-500 ease-in-out">Log In</a>
+                                class="hover:text-orange transition duration-500 ease-in-out ctabuttons">Log In</a>
                             <a
                                 href="register.html"
-                                class="hover:text-orange transition duration-500 ease-in-out">Sign Up</a>
+                                class="hover:text-orange transition duration-500 ease-in-out ctabuttons">Sign Up</a>
 
                             <form class="flex md:hidden items-center">
                                 <label for="simple-search" class="sr-only">Search</label>
@@ -719,5 +710,7 @@
     <!--------JS LINKS------>
     <script type="text/javascript" src="js/pre-loading.js"></script>
     <script type="text/javascript" src="js/product.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/user.js"></script>
 </body>
 </html>
