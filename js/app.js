@@ -1,9 +1,5 @@
 
 
-
-
-
-
 // Search display function
 document.addEventListener("DOMContentLoaded", function () {
     const searchBtn = document.getElementById('searchBtn');
@@ -53,16 +49,91 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// PRICE BAR
 
-// Get the elements
-var rangeInput = document.getElementById('price-range-input');
-var currencyInput = document.getElementById('currency-input');
+// DROPDOWNS 
 
-// Function to update the currency input
-function updateCurrencyInput() {
-  currencyInput.value = rangeInput.value;
-}
 
-// Add event listener to the range input
-rangeInput.addEventListener('input', updateCurrencyInput);
+document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.getElementById('menu-btn');
+    const nav = document.getElementById('menu');
+    const categoryDropdown = document.getElementById('cdropdown');
+    const categoryBtn = document.getElementById('dropdownDefaultButton');
+    const notifButton = document.getElementById('dropdownNotificationButton');
+    const notifDropdown = document.getElementById('dropdownNotification');
+    const userDropdown = document.getElementById('userDropdown');
+    const userButton = document.getElementById('avatarButton');
+
+    function closeMenu() {
+        if (nav.classList.contains('flex')) {
+            toggleMenu();
+        }
+    }
+    
+    function closeDropdowns() {
+        categoryDropdown.classList.add('hidden');
+        notifDropdown.classList.add('hidden');
+        userDropdown.classList.add('hidden');
+    }
+
+    function toggleMenu() {
+        btn.classList.toggle('open');
+        nav.classList.toggle('flex');
+        nav.classList.toggle('hidden');
+    }
+
+    function toggleCategoryDropdown() {
+        categoryDropdown.classList.toggle('flex');
+        categoryDropdown.classList.toggle('hidden');
+        notifDropdown.classList.add('hidden');
+        userDropdown.classList.add('hidden');
+    }
+
+    function toggleNotifDropdown() {
+        notifDropdown.classList.toggle('flex');
+        notifDropdown.classList.toggle('hidden');
+        categoryDropdown.classList.add('hidden');
+        userDropdown.classList.add('hidden');
+    }
+
+    function toggleUserDropdown() {
+        userDropdown.classList.toggle('flex');
+        userDropdown.classList.toggle('hidden');
+        notifDropdown.classList.add('hidden');
+        categoryDropdown.classList.add('hidden');
+    }
+
+    function handleDocumentClick(event) {
+        const isMenuClicked = event.target.closest('#menu-btn') || event.target.closest('#menu');
+        const isCategoryDropdownClicked = event.target.closest('#cdropdown') || event.target.closest('#dropdownDefaultButton');
+        const isNotifDropdownClicked = event.target.closest('#dropdownNotification') || event.target.closest('#dropdownNotificationButton');
+        const isUserDropdownClicked = event.target.closest('#userDropdown') || event.target.closest('#avatarButton');
+
+        if (!isMenuClicked && !isCategoryDropdownClicked && !isNotifDropdownClicked && !isUserDropdownClicked) {
+            closeMenu();
+            closeDropdowns();
+        }
+    }
+
+    btn.addEventListener('click', () => {
+        toggleMenu();
+        closeDropdowns();
+    });
+
+    
+    notifButton.addEventListener('click', () => {
+        toggleNotifDropdown();
+        closeMenu();
+    });
+    
+    userButton.addEventListener('click', () => {
+        toggleUserDropdown();
+        closeMenu();
+    });
+    
+    categoryBtn.addEventListener('click', () => {
+        toggleCategoryDropdown();
+        closeMenu();
+    });
+
+    document.addEventListener('click', handleDocumentClick);
+});
