@@ -145,16 +145,19 @@ document.addEventListener('DOMContentLoaded', function () {
 // PRICE BAR
 
 // Get the elements
-var rangeInput = document.getElementById('price-range-input');
-var currencyInput = document.getElementById('currency-input');
+const rangeInput = document.querySelectorAll('.price-range-input');
+const currencyInput = document.querySelectorAll('.currency-input');
 
 // Function to update the currency input
-function updateCurrencyInput() {
-  currencyInput.value = rangeInput.value;
+function updateCurrencyInput(index) {
+  currencyInput[index].value = rangeInput[index].value;
 }
 
-// Add event listener to the range input
-rangeInput.addEventListener('input', updateCurrencyInput);
+// Add event listener to each range input
+rangeInput.forEach((input, index) => {
+  input.addEventListener('input', () => updateCurrencyInput(index));
+});
+
 
 
 
