@@ -36,17 +36,18 @@ document.addEventListener("DOMContentLoaded", function () {
             spinIcon.classList.add('spin');
             btnText.textContent = "Authenticating...";
     
+            // Store the logged-in user in localStorage
+            localStorage.setItem("loggedInUser", JSON.stringify(user));
+    
             // Redirect after 5 seconds
             setTimeout(() => {
                 window.location.href = 'index.html';
             }, 5000);
-    
-
-
         } else {
             passField.classList.add("invalid");
         }
     });
+    
     
 });
 
