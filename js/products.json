@@ -5,7 +5,7 @@
       "products": [
         {
           "id": 1,
-          "name": "Apple 13.6' MacBook Air (M2, Midnight) 8GB /256gb) 2019",
+          "name": "Apple 13.6' MacBook Air (M2, Midnight) 8GB /256gb) BLACK 2019",
           "price": 1550.00,
           "discountedPrice": 1760.00,
           "rating": 4.95,
@@ -63,7 +63,7 @@
       "brand": "Dell",
       "products": [
         {
-          "id": 3,
+          "id": 7,
           "name": "DELL XPS 13 PLUS 9320, CORE I7, 1TB SSD/32GB RAM, Touchscreen, WIN 11",
           "price": 1200.00,
           "discountedPrice": 1349.00,
@@ -72,13 +72,49 @@
           "imageSrc": "assets/images/Dell/Dell XPS 13.jpg"
         },
         {
-          "id": 3,
+          "id": 8,
           "name": "DELL INSPIRON 16 PLUS, CORE I7, 2TB SSD 32GB RAM, 16' Non-Touch, WIN 11",
           "price": 1149.99,
           "discountedPrice": 1249.00,
           "rating": 4.8,
           "reviewCount": 50,
           "imageSrc": "assets/images/Dell/Dell Inspiron 16 Plus.jpg"
+        },
+        {
+          "id": 9,
+          "name": "DELL Vostro 14 11th Gen Intel Core I3 1TB HDD 4GB RAM Windows 10",
+          "price": 340.99,
+          "discountedPrice": 500.00,
+          "rating": 4.3,
+          "reviewCount": 25,
+          "imageSrc": "assets/images/Dell/Dell Vostro.jpg"
+        },
+        {
+          "id": 10,
+          "name": "DELL Vostro 15 Laptop- Intel Core I3- 8GB RAM/256GB SSD- Win 11",
+          "price": 400,
+          "discountedPrice": 550.00,
+          "rating": 3.9,
+          "reviewCount": 15,
+          "imageSrc": "assets/images/Dell/Dell vostro 15.jpg"
+        },
+        {
+          "id": 11,
+          "name": "DELL Chromebook 3400 - 14' - Celeron - 4 GB RAM - 32 GB EMMC + Bag",
+          "price": 200,
+          "discountedPrice": 350.00,
+          "rating": 3.0,
+          "reviewCount": 5,
+          "imageSrc": "assets/images/Dell/DELL Chromebook 3400 .jpg"
+        },
+        {
+          "id": 12,
+          "name": "DELL Precision 7670 16' Core I7-12850HX(16 Core) 4TB SSD / 32gbRAM 8GB",
+          "price": 2000,
+          "discountedPrice": 2100.00,
+          "rating": 4.0,
+          "reviewCount": 5,
+          "imageSrc": "assets/images/Dell/DELL Precision 7670.jpg"
         }
       ]
     }
