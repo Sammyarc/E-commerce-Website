@@ -207,3 +207,69 @@ document.addEventListener("DOMContentLoaded", function () {
         closeBtn.style.display = 'none';
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
+
+// Fetch the JSON data (you need to replace 'products.json' with the actual path to your JSON file)
+fetch('js/products.json')
+  .then(response => response.json())
+  .then(data => {
+    // Call the function to display products
+    displayProducts(data.laptops);
+  })
+  .catch(error => console.error('Error fetching products:', error));
+
+// Function to display products dynamically
+function displayProducts(laptops) {
+  const productGrid = document.getElementById('productGrid');
+
+  laptops.forEach(laptop => {
+    laptop.products.forEach(product => {
+      const productElement = createProductElement(product);
+      productGrid.appendChild(productElement);
+    });
+  });
+}
+
+// Helper function to create a product element
+function createProductElement(product) {
+  const productElement = document.createElement('div');
+  productElement.className = 'border-2 rounded-xl mt-5 ';
+
+  // Construct the product HTML
+  productElement.innerHTML = `
+    <a href="#">
+      <img src="${product.imageSrc}" alt="${product.name}" class="h-20 object-cover rounded-xl">
+    </a>
+    <div class="p-2">
+      <div class="flex gap-2 place-items-center md:gap-5">
+        <p class="text-sm font-semibold md:text-lg">$${product.price.toFixed(2)}</p>
+        <p class="text-sm font-light line-through md:text-base">$${product.discountedPrice.toFixed(2)}</p>
+      </div>
+      <p class="font-normal text-xs md:font-medium">${product.name}</p>
+      <div class="justify-between mt-5 place-items-center md:flex md:mt-2">
+        <div class="flex items-center mb-2 md:mb-0">
+          <svg
+            class="w-4 h-4 text-orange me-1"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewbox="0 0 22 20">
+            <path
+            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+          </svg>
+          <p class="text-xs ms-2 md:text-sm font-bold">${product.rating.toFixed(2)}</p>
+          <span class="w-1 h-1 mx-1.5 bg-orange rounded-full"></span>
+          <a href="#" class="text-xs ms-2 md:text-sm font-medium  hover:underline">${product.reviewCount} reviews</a>
+        </div>
+        <a href="#" class="flex justify-center px-2 py-2 bg-orange text-white font-semibold rounded-xl hover:bg-amber-500 transition duration-500 ease-in-out">Add to cart</a>
+      </div>
+    </div>
+  `;
+
+  return productElement;
+}
+
+} );
