@@ -236,7 +236,7 @@ function displayProducts(laptops) {
 // Helper function to create a product element
 function createProductElement(product) {
   const productElement = document.createElement('div');
-  productElement.className = 'border-2 rounded-xl mt-5 ';
+  productElement.className = 'border rounded-xl mt-5 ';
 
   // Construct the product HTML
   productElement.innerHTML = `
