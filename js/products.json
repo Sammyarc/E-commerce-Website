@@ -14,7 +14,7 @@
         },
         {
           "id": 2,
-          "name": "Apple MacBook Pro 16.2' - M1 Pro Chip 16GB 1TB Grey - 2021",
+          "name": "Apple MacBook Pro 16.2' - M1 Pro Chip 16GB 1TB - 2021",
           "price": 1550.00,
           "discountedPrice": 1759.00,
           "rating": 4.90,
@@ -59,6 +59,9 @@
         }
       ]
     },
+
+
+
     {
       "brand": "Dell",
       "products": [
@@ -115,36 +118,129 @@
           "rating": 4.0,
           "reviewCount": 5,
           "imageSrc": "assets/images/Dell/DELL Precision 7670.jpg"
+        }
+      ]
+    },
+
+
+    {
+      "brand": "HP",
+      "products":[
+        {
+          "id": 13,
+          "name": "Hp Notebook 14S-11th Gen-Intel® Core™ I3-8GB Ddr4-ram -512GB SSD- Win 10",
+          "price": 468,
+          "discountedPrice": 600.00,
+          "rating": 4.2,
+          "reviewCount": 10,
+          "imageSrc": "assets/images/HP/Hp Notebook 14S.jpg"
         },
         {
-          "id": 12,
-          "name": "DELL Precision 7670 16' Core I7-12850HX(16 Core) 4TB SSD / 32gbRAM 8GB",
-          "price": 2000,
-          "discountedPrice": 2100.00,
-          "rating": 4.0,
-          "reviewCount": 5,
-          "imageSrc": "assets/images/Dell/DELL Precision 7670.jpg"
+          "id": 14,
+          "name": "Hp Omen 16 Gaming 13th Gen Intel Core I7 16GB RAM / 1TB SSD 16.1' 6GB WIN 11",
+          "price": 1680,
+          "discountedPrice": 1800.00,
+          "rating": 4.5,
+          "reviewCount": 10,
+          "imageSrc": "assets/images/HP/HP OMEN.jpg"
         },
         {
-          "id": 12,
-          "name": "DELL Precision 7670 16' Core I7-12850HX(16 Core) 4TB SSD / 32gbRAM 8GB",
-          "price": 2000,
-          "discountedPrice": 2100.00,
-          "rating": 4.0,
-          "reviewCount": 5,
-          "imageSrc": "assets/images/Dell/DELL Precision 7670.jpg"
+          "id": 15,
+          "name": "Hp EliteBook 840 G5 Intel Core I5-16GB RAM/512GB SSD/Backlit Wins 11",
+          "price": 499,
+          "discountedPrice": 600.00,
+          "rating": 4.1,
+          "reviewCount": 20,
+          "imageSrc": "assets/images/HP/Hp EliteBook 840.jpg"
         },
         {
-          "id": 12,
-          "name": "DELL Precision 7670 16' Core I7-12850HX(16 Core) 4TB SSD / 32gbRAM 8GB",
-          "price": 2000,
-          "discountedPrice": 2100.00,
-          "rating": 4.0,
-          "reviewCount": 5,
-          "imageSrc": "assets/images/Dell/DELL Precision 7670.jpg"
+          "id": 16,
+          "name": "Hp ProBook 450 G9 12th Gen Intel Core I5 8GB DRAM 512GB SSD 15.6'",
+          "price": 879,
+          "discountedPrice": 700.00,
+          "rating": 4.5,
+          "reviewCount": 13,
+          "imageSrc": "assets/images/HP/Hp ProBook 450.jpg"
+        },
+        {
+          "id": 17,
+          "name": "Hp 16 Victus Gaming Intel Core I5 16' 16GB RAM/512GB SSD 4GB  Win 11",
+          "price": 960,
+          "discountedPrice": 1000.00,
+          "rating": 4.7,
+          "reviewCount": 10,
+          "imageSrc": "assets/images/HP/Hp 16 Victus Gaming.jpg"
+        },
+        {
+          "id": 18,
+          "name": "Hp Spectre 14-ef0013dx 2-in-1 X360 13.5'' 16GB RAM / 1TB SSD - Win 11",
+          "price": 1610,
+          "discountedPrice": 1800.00,
+          "rating": 4.4,
+          "reviewCount": 8,
+          "imageSrc": "assets/images/HP/Hp Spectre 14.jpg"
+        }
+      ]
+    },
+
+    {
+      "brand": "Asus",
+      "products":[
+        {
+          "id": 19,
+          "name": "Asus Zenbook 14 UX425EA Intel Core I5 14' 8GB RAM / 256GB SSD Win 11",
+          "price": 572.9,
+          "discountedPrice": 600.00,
+          "rating": 4.4,
+          "reviewCount": 10,
+          "imageSrc": "assets/images/Asus/Asus Zenbook 14.jpg"
+        },
+        {
+          "id": 20,
+          "name": "Asus ROG Flow Z13 GZ301ZC Intel Core I7-12700H 16GB 512GB Win 10",
+          "price": 1760,
+          "discountedPrice": 1800.00,
+          "rating": 4.6,
+          "reviewCount": 18,
+          "imageSrc": "assets/images/Asus/Asus ROG Flow.jpg"
+        },
+        {
+          "id": 21,
+          "name": "Asus Vivobook X515JA Intel Core I5 4GB RAM/512GB SSD Win 11 - Silver",
+          "price": 480,
+          "discountedPrice": 510.00,
+          "rating": 4.1,
+          "reviewCount": 20,
+          "imageSrc": "assets/images/Asus/Asus Vivobook X515JA.jpg"
+        },
+        {
+          "id": 22,
+          "name": "Asus ROG Flow Z13 GZ301ZC Intel Core I7-12700H 16GB 512GB Win 10",
+          "price": 1760,
+          "discountedPrice": 1800.00,
+          "rating": 4.5,
+          "reviewCount": 13,
+          "imageSrc": "assets/images/Asus/Asus ROG Flow Z13.jpg"
+        },
+        {
+          "id": 23,
+          "name": "Asus ROG Strix SCAR 15 Core I9 32GB RAM 1TB SSD Windows 11",
+          "price": 2380,
+          "discountedPrice": 2400.00,
+          "rating": 4.7,
+          "reviewCount": 30,
+          "imageSrc": "assets/images/Asus/Asus ROG Strix.jpg"
+        },
+        {
+          "id": 24,
+          "name": "Asus X515EA Core I7-1165G7 15.6' 8GB RAM / 256GB SSD Win 11",
+          "price": 520,
+          "discountedPrice": 600.00,
+          "rating": 4.4,
+          "reviewCount": 8,
+          "imageSrc": "assets/images/Asus/Asus X515EA.jpg"
         }
       ]
     }
-    
   ]
 }
