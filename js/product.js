@@ -273,7 +273,7 @@ document.addEventListener('DOMContentLoaded', function () {
     updatePaginationInfo(startIndex + 1, endIndex, allProducts.length);
 
     // Scroll to the top of the page
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'auto' });
   }
 
   function updatePaginationInfo(start, end, total) {
