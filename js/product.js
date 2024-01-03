@@ -9,7 +9,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const filterIcon = document.getElementById('filterIcon');
     const dropdownSortCheckbox = document.getElementById('dropdownSortCheckbox');
     const dropdownSortButton = document.getElementById('dropdownSortButton');
+    const SortCheckbox = document.getElementById('SortCheckbox');
+    const SortButton = document.getElementById('SortButton');
     const sortIcon = document.getElementById('sortIcon');
+    const bigSortIcon = document.getElementById('bigSortIcon');
     const notifButton = document.getElementById('dropdownNotificationButton');
     const notifDropdown = document.getElementById('dropdownNotification');
     const userDropdown = document.getElementById('userDropdown');
@@ -25,10 +28,12 @@ document.addEventListener('DOMContentLoaded', function () {
         categoryDropdown.classList.add('hidden');
         filterDropdown.classList.add('hidden');
         dropdownSortCheckbox.classList.add('hidden');
+        SortCheckbox.classList.add('hidden');
         notifDropdown.classList.add('hidden');
         userDropdown.classList.add('hidden');
         filterIcon.classList.remove('rotated');
         sortIcon.classList.remove('rotated');
+        bigSortIcon.classList.remove('rotated');
     }
 
     function toggleMenu() {
@@ -42,10 +47,12 @@ document.addEventListener('DOMContentLoaded', function () {
         categoryDropdown.classList.toggle('hidden');
         filterDropdown.classList.add('hidden');
         dropdownSortCheckbox.classList.add('hidden');
+        SortCheckbox.classList.add('hidden');
         notifDropdown.classList.add('hidden');
         userDropdown.classList.add('hidden');
         filterIcon.classList.remove('rotated');
         sortIcon.classList.remove('rotated');
+        bigSortIcon.classList.remove('rotated');
     }
 
     function toggleNotifDropdown() {
@@ -53,10 +60,12 @@ document.addEventListener('DOMContentLoaded', function () {
         notifDropdown.classList.toggle('hidden');
         filterDropdown.classList.add('hidden');
         dropdownSortCheckbox.classList.add('hidden');
+        SortCheckbox.classList.add('hidden');
         categoryDropdown.classList.add('hidden');
         userDropdown.classList.add('hidden');
         filterIcon.classList.remove('rotated');
         sortIcon.classList.remove('rotated');
+        bigSortIcon.classList.remove('rotated');
     }
 
     function toggleUserDropdown() {
@@ -65,9 +74,11 @@ document.addEventListener('DOMContentLoaded', function () {
         filterDropdown.classList.add('hidden');
         notifDropdown.classList.add('hidden');
         dropdownSortCheckbox.classList.add('hidden');
+        SortCheckbox.classList.add('hidden');
         categoryDropdown.classList.add('hidden');
         filterIcon.classList.remove('rotated');
         sortIcon.classList.remove('rotated');
+        bigSortIcon.classList.remove('rotated');
     }
 
     function toggleFilterDropdown() {
@@ -77,8 +88,10 @@ document.addEventListener('DOMContentLoaded', function () {
         categoryDropdown.classList.add('hidden');
         userDropdown.classList.add('hidden');
         dropdownSortCheckbox.classList.add('hidden');
+        SortCheckbox.classList.add('hidden');
         notifDropdown.classList.add('hidden');
         sortIcon.classList.remove('rotated');
+        bigSortIcon.classList.remove('rotated');
     }
 
     function toggleSortDropdown() {
@@ -90,17 +103,34 @@ document.addEventListener('DOMContentLoaded', function () {
         filterDropdown.classList.add('hidden');
         notifDropdown.classList.add('hidden');
         filterIcon.classList.remove('rotated');
+        SortCheckbox.classList.add('hidden');
+        bigSortIcon.classList.remove('rotated');
     }
+
+    
+    function toggleSortCheckbox() {
+      SortCheckbox.classList.toggle('flex');
+      SortCheckbox.classList.toggle('hidden');
+      bigSortIcon.classList.toggle('rotated');
+      categoryDropdown.classList.add('hidden');
+      userDropdown.classList.add('hidden');
+      filterDropdown.classList.add('hidden');
+      dropdownSortCheckbox.classList.add('hidden');
+      sortIcon.classList.toggle('rotated');
+      notifDropdown.classList.add('hidden');
+      filterIcon.classList.remove('rotated');
+  }
 
     function handleDocumentClick(event) {
         const isMenuClicked = event.target.closest('#menu-btn') || event.target.closest('#menu');
         const isCategoryDropdownClicked = event.target.closest('#cdropdown') || event.target.closest('#dropdownDefaultButton');
         const isFilterDropdownClicked = event.target.closest('#fdropdown') || event.target.closest('#filterDefaultButton');
         const isSortDropdownClicked = event.target.closest('#dropdownSortCheckbox') || event.target.closest('#dropdownSortButton');
+        const isSortCheckboxClicked = event.target.closest('#SortCheckbox') || event.target.closest('#SortButton');
         const isNotifDropdownClicked = event.target.closest('#dropdownNotification') || event.target.closest('#dropdownNotificationButton');
         const isUserDropdownClicked = event.target.closest('#userDropdown') || event.target.closest('#avatarButton');
 
-        if (!isMenuClicked && !isCategoryDropdownClicked && !isFilterDropdownClicked && !isSortDropdownClicked && !isNotifDropdownClicked && !isUserDropdownClicked) {
+        if (!isMenuClicked && !isCategoryDropdownClicked && !isFilterDropdownClicked && !isSortDropdownClicked && !isNotifDropdownClicked && !isUserDropdownClicked && !isSortCheckboxClicked) {
             closeMenu();
             closeDropdowns();
         }
@@ -131,6 +161,10 @@ document.addEventListener('DOMContentLoaded', function () {
         closeMenu();
     });
 
+   SortButton.addEventListener('click', () => {
+    toggleSortCheckbox();
+      closeMenu();
+  });
 
     filterBtn.addEventListener('click', () => {
         toggleFilterDropdown();
@@ -210,66 +244,131 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-
-
-// Fetch the JSON data (you need to replace 'products.json' with the actual path to your JSON file)
-fetch('js/products.json')
-  .then(response => response.json())
-  .then(data => {
-    // Call the function to display products
-    displayProducts(data.laptops);
-  })
-  .catch(error => console.error('Error fetching products:', error));
-
-// Function to display products dynamically
-function displayProducts(laptops) {
   const productGrid = document.getElementById('productGrid');
+  const paginationInfo = document.getElementById('paginationInfo');
+  const startRange = document.getElementById('startRange');
+  const endRange = document.getElementById('endRange');
+  const totalEntries = document.getElementById('totalEntries');
+  const prevButton = document.getElementById('prevButton');
+  const nextButton = document.getElementById('nextButton');
+  const productsPerPage = 12;
 
-  laptops.forEach(laptop => {
-    laptop.products.forEach(product => {
+  let currentPage = 1;
+  let totalPages;
+  let allProducts = [];
+
+  function renderProducts(page) {
+    productGrid.innerHTML = '';
+
+    const startIndex = (page - 1) * productsPerPage;
+    const endIndex = startIndex + productsPerPage;
+
+    const productsToDisplay = allProducts.slice(startIndex, endIndex);
+
+    productsToDisplay.forEach(product => {
       const productElement = createProductElement(product);
       productGrid.appendChild(productElement);
     });
-  });
-}
 
-// Helper function to create a product element
-function createProductElement(product) {
-  const productElement = document.createElement('div');
-  productElement.className = 'border rounded-xl mt-5 ';
+    updatePaginationInfo(startIndex + 1, endIndex, allProducts.length);
 
-  // Construct the product HTML
-  productElement.innerHTML = `
-    <a href="#">
-      <img src="${product.imageSrc}" alt="${product.name}" class="h-20 object-cover rounded-xl">
-    </a>
-    <div class="p-2">
-      <div class="flex gap-2 place-items-center md:gap-5">
-        <p class="text-sm font-semibold md:text-lg">$${product.price.toFixed(2)}</p>
-        <p class="text-sm font-light line-through md:text-base">$${product.discountedPrice.toFixed(2)}</p>
+    // Scroll to the top of the page
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function updatePaginationInfo(start, end, total) {
+    startRange.textContent = start;
+    endRange.textContent = end;
+    totalEntries.textContent = total;
+  }
+
+  function createProductElement(product) {
+    const productElement = document.createElement('div');
+    productElement.className = 'border rounded-xl mt-5';
+
+    // Construct the product HTML
+    productElement.innerHTML = `
+      <div class="loading-overlay">
+        <div class="loading-spinner"></div>
       </div>
-      <p class="font-normal text-xs md:font-medium">${product.name}</p>
-      <div class="justify-between mt-5 place-items-center md:flex md:mt-2">
-        <div class="flex items-center mb-2 md:mb-0">
-          <svg
-            class="w-4 h-4 text-orange me-1"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewbox="0 0 22 20">
-            <path
-            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-          </svg>
-          <p class="text-xs ms-2 md:text-sm font-bold">${product.rating.toFixed(2)}</p>
-          <span class="w-1 h-1 mx-1.5 bg-orange rounded-full"></span>
-          <a href="#" class="text-xs ms-2 md:text-sm font-medium  hover:underline">${product.reviewCount} reviews</a>
+      <a href="#">
+        <img src="${product.imageSrc}" alt="${product.name}" class="h-20 object-cover img-content rounded-xl hover:scale-105">
+      </a>
+      <div class="p-2">
+        <div class="flex gap-2 place-items-center md:gap-5">
+          <p class="text-sm font-semibold md:text-lg">$${product.price.toFixed(2)}</p>
+          <p class="text-sm font-light line-through md:text-base">$${product.discountedPrice.toFixed(2)}</p>
         </div>
-        <a href="#" class="flex justify-center px-2 py-2 bg-orange text-white font-semibold rounded-xl hover:bg-amber-500 transition duration-500 ease-in-out">Add to cart</a>
+        <p class="font-normal text-xs md:font-medium">${product.name}</p>
+        <div class="justify-between mt-5 place-items-center md:flex md:mt-2">
+          <div class="flex items-center mb-2 md:mb-0">
+            <svg
+              class="w-4 h-4 text-orange me-1"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 22 20">
+              <path
+                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <p class="text-xs ms-2 md:text-sm font-bold">${product.rating.toFixed(2)}</p>
+            <span class="w-1 h-1 mx-1.5 bg-orange rounded-full"></span>
+            <a href="#" class="text-xs ms-2 md:text-sm font-medium  hover:underline">${product.reviewCount} reviews</a>
+          </div>
+          <a href="#" class="flex justify-center px-2 py-2 bg-orange text-white font-semibold rounded-xl hover:bg-amber-500 transition duration-500 ease-in-out">Add to cart</a>
+        </div>
       </div>
-    </div>
-  `;
+    `;
 
-  return productElement;
-}
+    setTimeout(function () {
+      // Hide loading overlay for each element with the class 'loading-overlay'
+      document.querySelectorAll(".loading-overlay").forEach(function (overlay) {
+          overlay.style.display = "none";
+      });
+  
+      // Show img content for each element with the class 'img-content'
+      document.querySelectorAll(".img-content").forEach(function (imgContent) {
+          imgContent.style.display = "block";
+      });
+    }, 3000); // Change the delay time (in milliseconds) as needed
 
-} );
+    return productElement;
+  }
+
+  function updateButtons() {
+    prevButton.disabled = currentPage === 1;
+    nextButton.disabled = currentPage === totalPages;
+  }
+
+  function showPrevPage() {
+    if (currentPage > 1) {
+      currentPage--;
+      renderProducts(currentPage);
+      updateButtons();
+    }
+  }
+
+  function showNextPage() {
+    if (currentPage < totalPages) {
+      currentPage++;
+      renderProducts(currentPage);
+      updateButtons();
+    }
+  }
+
+  // Load products from JSON
+  fetch('js/products.json')
+    .then(response => response.json())
+    .then(data => {
+      allProducts = data.laptops.flatMap(brand => brand.products);
+      totalPages = Math.ceil(allProducts.length / productsPerPage);
+      renderProducts(currentPage);
+      updateButtons();
+    })
+    .catch(error => console.error('Error fetching products:', error));
+
+  // Add event listeners
+  prevButton.addEventListener('click', showPrevPage);
+  nextButton.addEventListener('click', showNextPage);
+
+});
