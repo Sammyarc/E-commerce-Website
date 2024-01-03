@@ -5,7 +5,7 @@
       "products": [
         {
           "id": 1,
-          "name": "Apple 13.6' MacBook Air (M2, Midnight) 8GB /256gb) BLACK 2019",
+          "name": "Apple 13.6' MacBook Air (M2, Midnight) 8GB /256gb) 2019",
           "price": 1550.00,
           "discountedPrice": 1760.00,
           "rating": 4.95,
@@ -106,6 +106,33 @@
           "rating": 3.0,
           "reviewCount": 5,
           "imageSrc": "assets/images/Dell/DELL Chromebook 3400 .jpg"
+        },
+        {
+          "id": 12,
+          "name": "DELL Precision 7670 16' Core I7-12850HX(16 Core) 4TB SSD / 32gbRAM 8GB",
+          "price": 2000,
+          "discountedPrice": 2100.00,
+          "rating": 4.0,
+          "reviewCount": 5,
+          "imageSrc": "assets/images/Dell/DELL Precision 7670.jpg"
+        },
+        {
+          "id": 12,
+          "name": "DELL Precision 7670 16' Core I7-12850HX(16 Core) 4TB SSD / 32gbRAM 8GB",
+          "price": 2000,
+          "discountedPrice": 2100.00,
+          "rating": 4.0,
+          "reviewCount": 5,
+          "imageSrc": "assets/images/Dell/DELL Precision 7670.jpg"
+        },
+        {
+          "id": 12,
+          "name": "DELL Precision 7670 16' Core I7-12850HX(16 Core) 4TB SSD / 32gbRAM 8GB",
+          "price": 2000,
+          "discountedPrice": 2100.00,
+          "rating": 4.0,
+          "reviewCount": 5,
+          "imageSrc": "assets/images/Dell/DELL Precision 7670.jpg"
         },
         {
           "id": 12,
