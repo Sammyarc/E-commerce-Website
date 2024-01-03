@@ -695,13 +695,13 @@
 
             <div class="w-full lg:w-9/12 xl:w-10/12 mx-5 mt-3 md:mt-10 lg:mx-8">
                 <div class="flex justify-between">
-                    <span class="text-sm">
+                    <span class="text-sm" id="paginationInfo">
                         Showing
-                        <span class="font-semibold text-gray-600">1</span>
+                        <span class="font-semibold text-gray-600" id="startRange"></span>
                         to
-                        <span class="font-semibold text-gray-600">12</span>
+                        <span class="font-semibold text-gray-600" id="endRange"></span>
                         of
-                        <span class="font-semibold text-gray-600">36</span>
+                        <span class="font-semibold text-gray-600" id="totalEntries"></span>
                         Entries
                     </span>
 
@@ -709,12 +709,12 @@
 
                     <div class="hidden lg:flex">
                         <button
-                            id="dropdownSortButton"
-                            data-dropdown-toggle="dropdownSortCheckbox"
+                            id="SortButton"
+                            data-dropdown-toggle="SortCheckbox"
                             class="text-black text-center flex place-items-center relative"
                             type="button">Sort By
                             <svg
-                                id="sortIcon"
+                                id="bigSortIcon"
                                 class="w-2.5 h-2.5 ms-3"
                                 aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -731,70 +731,70 @@
 
                         <!-- Dropdown menu -->
                         <div
-                            id="dropdownSortCheckbox"
+                            id="SortCheckbox"
                             class="z-10 absolute right-2 hidden w-48 bg-white rounded-lg shadow mt-7">
                             <ul
                                 class="p-3 space-y-3 text-sm text-black"
-                                aria-labelledby="dropdownCheckboxButton">
+                                aria-labelledby="CheckboxButton">
                                 <li>
                                     <div class="flex items-center">
                                         <input
-                                            id="checkbox-item-1"
+                                            id="checkbox-item-01"
                                             type="checkbox"
                                             value=""
-                                            class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
-                                        <label for="checkbox-item-1" class="ms-2 text-sm font-medium">Best Seller</label>
+                                            class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange cursor-pointer">
+                                        <label for="checkbox-item-01" class="ms-2 text-sm font-medium cursor-pointer">Best Seller</label>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="flex items-center">
                                         <input
-                                            id="checkbox-item-2"
+                                            id="checkbox-item-02"
                                             type="checkbox"
                                             value=""
-                                            class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
-                                        <label for="checkbox-item-2" class="ms-2 text-sm font-medium">Ratings</label>
+                                            class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange cursor-pointer">
+                                        <label for="checkbox-item-02" class="ms-2 text-sm font-medium cursor-pointer">Ratings</label>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="flex items-center">
                                         <input
                                             checked="checked"
-                                            id="checkbox-item-3"
+                                            id="checkbox-item-03"
                                             type="checkbox"
                                             value=""
-                                            class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
-                                        <label for="checkbox-item-3" class="ms-2 text-sm font-medium">Newest</label>
+                                            class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange cursor-pointer">
+                                        <label for="checkbox-item-03" class="ms-2 text-sm font-medium cursor-pointer">Newest</label>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="flex items-center">
                                         <input
-                                            id="checkbox-item-4"
+                                            id="checkbox-item-04"
                                             type="checkbox"
                                             value=""
-                                            class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
-                                        <label for="checkbox-item-4" class="ms-2 text-sm font-medium">Highest Price</label>
+                                            class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange cursor-pointer">
+                                        <label for="checkbox-item-04" class="ms-2 text-sm font-medium cursor-pointer">Highest Price</label>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="flex items-center">
                                         <input
-                                            id="checkbox-item-5"
+                                            id="checkbox-item-05"
                                             type="checkbox"
                                             value=""
-                                            class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
-                                        <label for="checkbox-item-5" class="ms-2 text-sm font-medium">Lowest Price</label>
+                                            class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange cursor-pointer">
+                                        <label for="checkbox-item-05" class="ms-2 text-sm font-medium cursor-pointer">Lowest Price</label>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="flex items-center">
                                         <input
-                                            id="checkbox-item-6"
+                                            id="checkbox-item-06"
                                             type="checkbox"
                                             value=""
-                                            class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange">
-                                        <label for="checkbox-item-6" class="ms-2 text-sm font-medium">Name</label>
+                                            class="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-orange accent-orange cursor-pointer">
+                                        <label for="checkbox-item-06" class="ms-2 text-sm font-medium cursor-pointer">Name</label>
                                     </div>
                                 </li>
                             </ul>
@@ -809,23 +809,17 @@
         </section>
 
         <div class="flex flex-col items-center mt-8 lg:items-end lg:mx-8">
-            <!-- Help text -->
-            <span class="text-sm text-gray-700 dark:text-gray-400">
-                Showing
-                <span class="font-semibold ">1</span>
-                to
-                <span class="font-semibold">12</span>
-                of
-                <span class="font-semibold">36</span>
-                Entries
-            </span>
             <!-- Buttons -->
             <div class="flex gap-1 mt-2 xs:mt-0">
                 <button
+                    id="prevButton"
+                    onclick="showPrevious()"
                     class="flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-orange rounded-s hover:bg-amber-500 transition delay-300 ease-in-out">
                     Prev
                 </button>
                 <button
+                    id="nextButton"
+                    onclick="showNext()"
                     class="flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-orange border-0 border-s border-orange rounded-e hover:bg-amber-500 transition delay-300 ease-in-out">
                     Next
                 </button>
