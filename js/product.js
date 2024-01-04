@@ -292,7 +292,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="loading-spinner"></div>
       </div>
       <a href="#">
-        <img src="${product.imageSrc}" alt="${product.name}" class="h-20 object-cover img-content rounded-xl hover:scale-105">
+        <img src="${product.imageSrc}" alt="${product.name}" class="mx-auto object-cover img-content rounded-xl hover:scale-105">
       </a>
       <div class="p-2">
         <div class="flex gap-2 place-items-center md:gap-5">
