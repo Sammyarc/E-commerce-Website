@@ -303,9 +303,17 @@ iframe{
 
 .img-content{
   display: none;
+  width: 80%;
 }
 
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+#nextButton:hover svg{
+     transform: translateX(2px);
+}
+#prevButton:hover svg{
+  transform: translateX(-2px);
 }
