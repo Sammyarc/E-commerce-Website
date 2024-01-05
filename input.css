@@ -317,3 +317,18 @@ iframe{
 #prevButton:hover svg{
   transform: translateX(-2px);
 }
+
+
+/** DESCRIPTION **/
+
+.selectable{
+  margin-top: 10px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.selected{
+  border: 2px solid;
+  border-color: orange;
+}
