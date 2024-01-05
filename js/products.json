@@ -10,7 +10,7 @@
           "discountedPrice": 1760.00,
           "rating": 4.95,
           "reviewCount": 73,
-          "imageSrc": "assets/images/Apple/MacBook Air M2jpg.jpg"
+          "imageSrc": "assets/images/Apple/MacBook_Air_M2jpg-removebg-preview.png"
         },
         {
           "id": 2,
@@ -19,7 +19,7 @@
           "discountedPrice": 1759.00,
           "rating": 4.90,
           "reviewCount": 70,
-          "imageSrc": "assets/images/Apple/MacBook Pro.jpg"
+          "imageSrc": "assets/images/Apple/MacBook_Pro-removebg-preview.png"
         },
         {
           "id": 3,
@@ -28,7 +28,7 @@
           "discountedPrice": 759.00,
           "rating": 4.8,
           "reviewCount":49,
-          "imageSrc": "assets/images/Apple/Macbook Air 2020.jpg"
+          "imageSrc": "assets/images/Apple/Macbook_Air_2020-removebg-preview.png"
         },
         {
           "id": 4,
@@ -37,7 +37,7 @@
           "discountedPrice": 559.00,
           "rating": 4.1,
           "reviewCount":19,
-          "imageSrc": "assets/images/Apple/MacBook Air MD711LL.jpg"
+          "imageSrc": "assets/images/Apple/MacBook_Air_MD711LL-removebg-preview.png"
         },
         {
           "id": 5,
@@ -46,7 +46,7 @@
           "discountedPrice": 1600.00,
           "rating": 4.1,
           "reviewCount":19,
-          "imageSrc": "assets/images/Apple/MacBook Air 15.3.jpg"
+          "imageSrc": "assets/images/Apple/MacBook_Air_15.3-removebg-preview.png"
         },
         {
           "id": 6,
@@ -55,7 +55,7 @@
           "discountedPrice": 2900.00,
           "rating": 4.3,
           "reviewCount":19,
-          "imageSrc": "assets/images/Apple/MacBook Pro 16.jpg"
+          "imageSrc": "assets/images/Apple/MacBook_Pro_16-removebg-preview.png"
         }
       ]
     },
