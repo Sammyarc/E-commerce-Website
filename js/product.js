@@ -288,12 +288,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Construct the product HTML
     productElement.innerHTML = `
-      <div class="loading-overlay">
-        <div class="loading-spinner"></div>
-      </div>
-      <a href="#">
-        <img src="${product.imageSrc}" alt="${product.name}" class="mx-auto object-cover img-content rounded-xl hover:scale-105">
-      </a>
+    <a href="listings.html?id=${product.id}">
+    <div class="loading-overlay">
+    <div class="loading-spinner"></div>
+  </div>
+    <img src="${product.imageSrc}" alt="${product.name}" class="mx-auto object-cover img-content rounded-xl hover:scale-105">
+  </a>
       <div class="p-2">
         <div class="flex gap-2 place-items-center md:gap-5">
           <p class="text-sm font-semibold md:text-lg">$${product.price.toFixed(2)}</p>
