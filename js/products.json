@@ -72,7 +72,7 @@
           "discountedPrice": 1349.00,
           "rating": 4.8,
           "reviewCount": 65,
-          "imageSrc": "assets/images/Dell/Dell XPS 13.jpg"
+          "imageSrc": "assets/images/Dell/Dell_XPS_13-removebg-preview.png"
         },
         {
           "id": 8,
@@ -81,7 +81,7 @@
           "discountedPrice": 1249.00,
           "rating": 4.8,
           "reviewCount": 50,
-          "imageSrc": "assets/images/Dell/Dell Inspiron 16 Plus.jpg"
+          "imageSrc": "assets/images/Dell/Dell_Inspiron_16_Plus-removebg-preview.png"
         },
         {
           "id": 9,
@@ -90,7 +90,7 @@
           "discountedPrice": 500.00,
           "rating": 4.3,
           "reviewCount": 25,
-          "imageSrc": "assets/images/Dell/Dell Vostro.jpg"
+          "imageSrc": "assets/images/Dell/Dell_Vostro-removebg-preview.png"
         },
         {
           "id": 10,
@@ -99,7 +99,7 @@
           "discountedPrice": 550.00,
           "rating": 3.9,
           "reviewCount": 15,
-          "imageSrc": "assets/images/Dell/Dell vostro 15.jpg"
+          "imageSrc": "assets/images/Dell/Dell_vostro_15-removebg-preview.png"
         },
         {
           "id": 11,
@@ -108,7 +108,7 @@
           "discountedPrice": 350.00,
           "rating": 3.0,
           "reviewCount": 5,
-          "imageSrc": "assets/images/Dell/DELL Chromebook 3400 .jpg"
+          "imageSrc": "assets/images/Dell/DELL_Chromebook_3400_-removebg-preview.png"
         },
         {
           "id": 12,
@@ -117,7 +117,7 @@
           "discountedPrice": 2100.00,
           "rating": 4.0,
           "reviewCount": 5,
-          "imageSrc": "assets/images/Dell/DELL Precision 7670.jpg"
+          "imageSrc": "assets/images/Dell/DELL_Precision_7670-removebg-preview.png"
         }
       ]
     },
