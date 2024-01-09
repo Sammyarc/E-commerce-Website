@@ -7,9 +7,9 @@
                     "id": 1,
                     "model": "Apple 13.6' MacBook Air (M2, Midnight) 8GB /256gb) 2019",
                     "imageSrc": {
-                        "image1" : "assets/images/Apple/MacBook_Air_M2jpg-removebg-preview.png",
-                        "image2" : "assets/images/Apple/Apple_2019_2_-removebg-preview.png",
-                        "image3" : "assets/images/Apple/Apple_2019_3_-removebg-preview.png"
+                        "image1" : "assets/images/Apple/macbook_air_13_in_midnight_pdp_image_position-1__wwen_5375c754-8eff-41b2-93c2-d53105fcf5ac_800x.png",
+                        "image2" : "assets/images/Apple/macbook_air_13_in_midnight_pdp_image_position-3__wwen_2_a83c4b75-9f3e-41cc-9fe6-b42a8358218a_5000x.png",
+                        "image3" : "assets/images/Apple/macbook_air_13_in_space_gray_pdp_image_position-1__wwen_061cf3c6-276c-481e-8196-b4f72c60c1df_5000x.png"
                     },
                     "ratings": {
                         "stars": "4.5",
