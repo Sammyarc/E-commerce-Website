@@ -52,15 +52,15 @@ document.addEventListener('DOMContentLoaded', function () {
         const productDetailsHTML = `
         <div>
 <!-- Display container -->
-<div class="bg-gray-100 rounded-2xl p-5 h-96 w-full mt-12" id="displayContainer">
+<div class="displaycontainer mt-12" id="displayContainer">
     <!-- Clicked image will be displayed here -->
-    <img src="${product.imageSrc.image1}" id="displayedImage" alt="Displayed Image">
+    <img src="${product.imageSrc.image1}" id="displayedImage" alt="Displayed Image" class="hover:scale-105">
 </div>
 <!-- Image grid -->
-<div class="image-container w-96 mt-3 gap-5">
-    <img src="${product.imageSrc.image2}" alt="Image 1" onclick="displayImage('${product.imageSrc.image2}', toggleImageBorder(this))" class="selectable">
-    <img src="${product.imageSrc.image3}" alt="Image 2" onclick="displayImage('${product.imageSrc.image3}', toggleImageBorder(this))" class="selectable">
-    <img src="${product.imageSrc.image1}" alt="Image 3" onclick="displayImage('${product.imageSrc.image1}', toggleImageBorder(this))" class="selectable">
+<div class="image-container w-96 mt-5 gap-5">
+    <img src="${product.imageSrc.image2}" alt="Image 1" onclick="displayImage('${product.imageSrc.image2}', toggleImageBorder(this))" class="select">
+    <img src="${product.imageSrc.image3}" alt="Image 2" onclick="displayImage('${product.imageSrc.image3}', toggleImageBorder(this))" class="select">
+    <img src="${product.imageSrc.image1}" alt="Image 3" onclick="displayImage('${product.imageSrc.image1}', toggleImageBorder(this))" class="select">
 </div>
 </div>
     <div class="mt-12">
