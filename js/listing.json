@@ -6,7 +6,11 @@
                 {
                     "id": 1,
                     "model": "Apple 13.6' MacBook Air (M2, Midnight) 8GB /256gb) 2019",
-                    "imageSrc": "assets/images/Apple/MacBook_Air_M2jpg-removebg-preview.png",
+                    "imageSrc": {
+                        "image1" : "assets/images/Apple/MacBook_Air_M2jpg-removebg-preview.png",
+                        "image2" : "assets/images/Apple/Apple_2019_2_-removebg-preview.png",
+                        "image3" : "assets/images/Apple/Apple_2019_3_-removebg-preview.png"
+                    },
                     "ratings": {
                         "stars": "4.5",
                         "sold": 5
@@ -24,7 +28,7 @@
                     "discount": {
                         "icon": "assets/images/offer-9678.svg",
                         "percentage": -7,
-                        "currentPrice": 1550.00,
+                        "currentPrice": [1,550.00],
                         "originalPrice": 1760.00
                     },
                     "storageOptions": [
