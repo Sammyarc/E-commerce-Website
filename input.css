@@ -330,7 +330,7 @@ iframe{
 
 .displaycontainer img{
   width: 90%;
-  height: 90%;
+  height: 95%;
   object-fit:cover;
   margin: auto;
   image-rendering:crisp-edges;
