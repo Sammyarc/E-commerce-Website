@@ -58,9 +58,9 @@ document.addEventListener('DOMContentLoaded', function () {
 </div>
 <!-- Image grid -->
 <div class="image-container w-96 mt-5 gap-5">
+    <img src="${product.imageSrc.image1}" alt="Image 3" onclick="displayImage('${product.imageSrc.image1}', toggleImageBorder(this))" class="select">
     <img src="${product.imageSrc.image2}" alt="Image 1" onclick="displayImage('${product.imageSrc.image2}', toggleImageBorder(this))" class="select">
     <img src="${product.imageSrc.image3}" alt="Image 2" onclick="displayImage('${product.imageSrc.image3}', toggleImageBorder(this))" class="select">
-    <img src="${product.imageSrc.image1}" alt="Image 3" onclick="displayImage('${product.imageSrc.image1}', toggleImageBorder(this))" class="select">
 </div>
 </div>
     <div class="mt-12">
