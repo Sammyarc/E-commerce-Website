@@ -321,6 +321,22 @@ iframe{
 
 /** DESCRIPTION **/
 
+.displaycontainer{
+ width: 100%;
+ height: 350px;
+ background-color: #f2f0f0;
+ border-radius: 15px;
+}
+
+.displaycontainer img{
+  width: 90%;
+  height: 90%;
+  object-fit:cover;
+  margin: auto;
+  image-rendering:crisp-edges;
+}
+
+
 .selectable{
   margin-top: 10px;
   cursor: pointer;
@@ -331,6 +347,11 @@ iframe{
 .selected{
   border: 2px solid;
   border-color: orange;
+}
+
+.select{
+  cursor: pointer;
+  border-radius: 8px;
 }
 
 .image-container{
