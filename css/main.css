@@ -962,6 +962,10 @@ video {
   gap: 1.75rem;
 }
 
+.gap-8 {
+  gap: 2rem;
+}
+
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -1859,6 +1863,11 @@ iframe{
 .selected{
   border: 2px solid;
   border-color: orange;
+}
+
+.image-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .hover\:translate-x-2:hover {
